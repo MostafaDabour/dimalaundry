@@ -1,7 +1,13 @@
 # Dima Laundry website
 
-Static site for dimalaundry.com. Plain HTML, no build step, hosted on Cloudflare Pages.
+Static site for dimalaundry.com, hosted on Cloudflare. Every page is plain HTML so Google, ChatGPT, Gemini and other AI crawlers can read it.
 
-- Every page is server-rendered HTML so Google, ChatGPT, Gemini and other AI crawlers can read it.
-- `sitemap.xml`, `robots.txt`, `llms.txt` and `_redirects` sit in the root.
-- Yellow highlighted text on the site marks facts the client still needs to confirm.
+## Editing
+All content is generated. Do not edit the HTML files directly.
+
+- Facts, branches, services, reviews: `src/content.py`
+- Prices: `src/prices.json` (from the client's retail price list, 12 Oct 2026)
+- Page layouts: `src/pages.py` and `src/home.py`
+- Styles and scripts: `src/site.css`, `src/site.js`
+
+Rebuild with `python3 src/build.py`, then commit and push. Cloudflare deploys automatically.

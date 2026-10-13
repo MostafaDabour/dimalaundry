@@ -1,0 +1,1210 @@
+{
+ "updated": "12 October 2026",
+ "men": {
+  "Laundry and Dry Cleaning": [
+   [
+    "Shirt",
+    14,
+    9.8,
+    20,
+    14
+   ],
+   [
+    "T-Shirt",
+    14,
+    9.8,
+    20,
+    14
+   ],
+   [
+    "Suit Jacket",
+    33,
+    23.1,
+    50,
+    35
+   ],
+   [
+    "Jacket Leather",
+    100,
+    70,
+    150,
+    105
+   ],
+   [
+    "Suit 2Pcs",
+    48,
+    33.6,
+    80,
+    56
+   ],
+   [
+    "Suit 3 Pcs",
+    60,
+    42,
+    100,
+    70
+   ],
+   [
+    "Leather Top",
+    80,
+    56,
+    100,
+    70
+   ],
+   [
+    "Waist Coat",
+    20,
+    14,
+    25,
+    17.5
+   ],
+   [
+    "Trouser",
+    15,
+    10.5,
+    30,
+    21
+   ],
+   [
+    "Trouser - Leather (From)",
+    80,
+    56,
+    120,
+    84
+   ],
+   [
+    "Short",
+    12,
+    8.4,
+    25,
+    17.5
+   ],
+   [
+    "Track Suit 2 pcs",
+    30,
+    21,
+    60,
+    42
+   ],
+   [
+    "Track Top",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Track Bottom",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Pyjma suit - 2 Pcs",
+    20,
+    14,
+    35,
+    24.5
+   ],
+   [
+    "Pyjama Top",
+    12,
+    8.4,
+    20,
+    14
+   ],
+   [
+    "Pyjama Bottom",
+    10,
+    7,
+    15,
+    10.5
+   ],
+   [
+    "Slacks",
+    12,
+    8.4,
+    20,
+    14
+   ]
+  ],
+  "Traditional Wear": [
+   [
+    "Kandura",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Kandura Wool",
+    30,
+    21,
+    40,
+    28
+   ],
+   [
+    "Ghutra",
+    12,
+    8.4,
+    20,
+    14
+   ],
+   [
+    "Ghutra Wool",
+    15,
+    10.5,
+    25,
+    17.5
+   ],
+   [
+    "Dhoti/Lungi",
+    12,
+    8.4,
+    20,
+    14
+   ],
+   [
+    "Kurtha",
+    15,
+    10.5,
+    30,
+    21
+   ],
+   [
+    "Salwar",
+    15,
+    10.5,
+    20,
+    14
+   ],
+   [
+    "Salwar Suit - 2Pcs",
+    30,
+    21,
+    40,
+    28
+   ],
+   [
+    "Salwar Suit - 3Pcs",
+    40,
+    28,
+    50,
+    35
+   ]
+  ],
+  "Winter Items": [
+   [
+    "Sweater",
+    35,
+    24.5,
+    45,
+    31.5
+   ],
+   [
+    "Pull Over",
+    35,
+    24.5,
+    45,
+    31.5
+   ],
+   [
+    "Hoodie",
+    35,
+    24.5,
+    45,
+    31.5
+   ],
+   [
+    "Jacket",
+    50,
+    35,
+    80,
+    56
+   ],
+   [
+    "Over Coat",
+    60,
+    42,
+    80,
+    56
+   ],
+   [
+    "Over Coat (Long)",
+    100,
+    70,
+    120,
+    84
+   ]
+  ]
+ },
+ "women": {
+  "Laundry and Dry Cleaning": [
+   [
+    "Shirt",
+    14,
+    9.8,
+    20,
+    14
+   ],
+   [
+    "T-Shirt",
+    14,
+    9.8,
+    20,
+    14
+   ],
+   [
+    "Suit Jacket",
+    33,
+    23.1,
+    40,
+    28
+   ],
+   [
+    "Jacket Leather",
+    100,
+    70,
+    150,
+    105
+   ],
+   [
+    "Suit 2Pcs",
+    48,
+    33.6,
+    60,
+    42
+   ],
+   [
+    "Suit 3 Pcs",
+    60,
+    42,
+    80,
+    56
+   ],
+   [
+    "Leather Top",
+    80,
+    56,
+    100,
+    70
+   ],
+   [
+    "Shiela/ Scarf",
+    12,
+    8.4,
+    18,
+    12.6
+   ],
+   [
+    "Shiela/ Scarf Wool",
+    18,
+    12.6,
+    20,
+    14
+   ],
+   [
+    "Waist Coat",
+    20,
+    14,
+    25,
+    17.5
+   ],
+   [
+    "Trouser",
+    15,
+    10.5,
+    20,
+    14
+   ],
+   [
+    "Trouser - Leather (From)",
+    80,
+    56,
+    100,
+    70
+   ],
+   [
+    "Short",
+    12,
+    8.4,
+    15,
+    10.5
+   ],
+   [
+    "Track Suit 2 pcs",
+    30,
+    21,
+    40,
+    28
+   ],
+   [
+    "Track Top",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Track Bottom",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Pyjma suit - 2 Pcs",
+    20,
+    14,
+    35,
+    24.5
+   ],
+   [
+    "Pyjama Top",
+    12,
+    8.4,
+    18,
+    12.6
+   ],
+   [
+    "Pyjama Bottom",
+    10,
+    7,
+    12,
+    8.4
+   ],
+   [
+    "Slacks",
+    10,
+    7,
+    15,
+    10.5
+   ],
+   [
+    "Frock",
+    12,
+    8.4,
+    18,
+    12.6
+   ],
+   [
+    "Dress Leather",
+    120,
+    84,
+    150,
+    105
+   ],
+   [
+    "Skirt",
+    15,
+    10.5,
+    20,
+    14
+   ],
+   [
+    "Skirt Pleated",
+    25,
+    17.5,
+    40,
+    28
+   ],
+   [
+    "Leather Skirt",
+    80,
+    56,
+    120,
+    84
+   ],
+   [
+    "Dress Short",
+    30,
+    21,
+    35,
+    24.5
+   ],
+   [
+    "Dress Long",
+    40,
+    28,
+    45,
+    31.5
+   ],
+   [
+    "Party Dress Regular",
+    100,
+    70,
+    130,
+    91
+   ],
+   [
+    "Party Dress Heavy",
+    200,
+    140,
+    300,
+    210
+   ]
+  ],
+  "Traditional Wear": [
+   [
+    "Abaya",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Abaya Delicate",
+    30,
+    21,
+    40,
+    28
+   ],
+   [
+    "Jalabiya",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Jalabiya Delicate",
+    30,
+    21,
+    40,
+    28
+   ],
+   [
+    "Saree",
+    40,
+    28,
+    50,
+    35
+   ],
+   [
+    "Kurtha",
+    15,
+    10.5,
+    20,
+    14
+   ],
+   [
+    "Salwar",
+    15,
+    10.5,
+    20,
+    14
+   ],
+   [
+    "Salwar Suit - 2Pcs",
+    30,
+    21,
+    40,
+    28
+   ],
+   [
+    "Salwar Suit - 3Pcs",
+    40,
+    28,
+    50,
+    35
+   ]
+  ],
+  "Winter Items": [
+   [
+    "Sweater",
+    35,
+    24.5,
+    45,
+    31.5
+   ],
+   [
+    "Pull Over",
+    35,
+    24.5,
+    45,
+    31.5
+   ],
+   [
+    "Hoodie",
+    35,
+    24.5,
+    45,
+    31.5
+   ],
+   [
+    "Jacket",
+    50,
+    35,
+    80,
+    56
+   ],
+   [
+    "Over Coat",
+    60,
+    42,
+    80,
+    56
+   ],
+   [
+    "Over Coat (Long)",
+    100,
+    70,
+    120,
+    84
+   ]
+  ]
+ },
+ "baby": {
+  "Clothing": [
+   [
+    "Shirt",
+    7,
+    4.9,
+    12,
+    8.4
+   ],
+   [
+    "T-Shirt",
+    7,
+    4.9,
+    13,
+    9.1
+   ],
+   [
+    "Suit Jacket",
+    25,
+    17.5,
+    35,
+    24.5
+   ],
+   [
+    "Jacket Leather",
+    60,
+    42,
+    80,
+    56
+   ],
+   [
+    "Suit 2Pcs",
+    30,
+    21,
+    40,
+    28
+   ],
+   [
+    "Suit 3 Pcs",
+    40,
+    28,
+    50,
+    35
+   ],
+   [
+    "Pyjma suit - 2 Pcs",
+    15,
+    10.5,
+    25,
+    17.5
+   ],
+   [
+    "Pyjama Top",
+    8,
+    5.6,
+    13,
+    9.1
+   ],
+   [
+    "Pyjama Bottom",
+    7,
+    4.9,
+    12,
+    8.4
+   ],
+   [
+    "Dress",
+    15,
+    10.5,
+    25,
+    17.5
+   ],
+   [
+    "Trouser",
+    9,
+    6.3,
+    15,
+    10.5
+   ],
+   [
+    "Short",
+    8,
+    5.6,
+    12,
+    8.4
+   ]
+  ],
+  "Winter Items": [
+   [
+    "Sweater",
+    15,
+    10.5,
+    20,
+    14
+   ],
+   [
+    "Hoodie",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Jacket",
+    35,
+    24.5,
+    45,
+    31.5
+   ]
+  ]
+ },
+ "common": {
+  "Accessories and Underwear": [
+   [
+    "Baniyan/ Under Shirt",
+    10,
+    7,
+    15,
+    10.5
+   ],
+   [
+    "Underwear",
+    6,
+    4.2,
+    10,
+    7
+   ],
+   [
+    "Socks (Pair)",
+    6,
+    4.2,
+    10,
+    7
+   ],
+   [
+    "Tie",
+    12,
+    8.4,
+    20,
+    14
+   ],
+   [
+    "Gloves",
+    15,
+    10.5,
+    20,
+    14
+   ],
+   [
+    "Belt",
+    15,
+    10.5,
+    20,
+    14
+   ],
+   [
+    "Cap",
+    15,
+    10.5,
+    20,
+    14
+   ],
+   [
+    "Bra",
+    8,
+    5.6,
+    15,
+    10.5
+   ],
+   [
+    "Blouse/Top",
+    15,
+    10.5,
+    25,
+    17.5
+   ],
+   [
+    "Blouse/Top Delicate",
+    25,
+    17.5,
+    35,
+    24.5
+   ],
+   [
+    "Kameez",
+    12,
+    8.4,
+    15,
+    10.5
+   ],
+   [
+    "Baniyan",
+    8,
+    5.6,
+    12,
+    8.4
+   ],
+   [
+    "Boxer",
+    10,
+    7,
+    15,
+    10.5
+   ],
+   [
+    "Apron",
+    8,
+    5.6,
+    15,
+    10.5
+   ],
+   [
+    "Toys",
+    30,
+    21,
+    50,
+    35
+   ],
+   [
+    "Coverall",
+    30,
+    21,
+    40,
+    28
+   ],
+   [
+    "Jumper",
+    25,
+    17.5,
+    40,
+    28
+   ],
+   [
+    "Mask",
+    5,
+    3.5,
+    10,
+    7
+   ],
+   [
+    "Head Band",
+    6,
+    4.2,
+    10,
+    7
+   ],
+   [
+    "Night Dress",
+    15,
+    10.5,
+    25,
+    17.5
+   ]
+  ],
+  "Home Linens": [
+   [
+    "Bed Sheet",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Bed Cover",
+    30,
+    21,
+    40,
+    28
+   ],
+   [
+    "Bed Protector",
+    35,
+    24.5,
+    50,
+    35
+   ],
+   [
+    "Bedspread",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Pillow Case",
+    8,
+    5.6,
+    12,
+    8.4
+   ],
+   [
+    "Pillow",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Duck feather Pillow",
+    35,
+    24.5,
+    50,
+    35
+   ],
+   [
+    "Cushion Case S/M",
+    12,
+    8.4,
+    20,
+    14
+   ],
+   [
+    "Cushion Case Big",
+    15,
+    10.5,
+    25,
+    17.5
+   ],
+   [
+    "Cushion S/M",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Cushion Big",
+    30,
+    21,
+    40,
+    28
+   ],
+   [
+    "Duvet Cover",
+    40,
+    28,
+    60,
+    42
+   ],
+   [
+    "Duvet",
+    60,
+    42,
+    80,
+    56
+   ],
+   [
+    "Duck feather Duvet",
+    80,
+    56,
+    100,
+    70
+   ],
+   [
+    "Blanket Woolen",
+    50,
+    35,
+    70,
+    49
+   ],
+   [
+    "Bath Mat",
+    12,
+    8.4,
+    20,
+    14
+   ],
+   [
+    "Bath Robe",
+    15,
+    10.5,
+    25,
+    17.5
+   ],
+   [
+    "Bath Towel",
+    10,
+    7,
+    20,
+    14
+   ],
+   [
+    "Beach Towel",
+    12,
+    8.4,
+    20,
+    14
+   ]
+  ],
+  "Small Linens and Towels": [
+   [
+    "Baby Blanket",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Bed Sheet",
+    15,
+    10.5,
+    25,
+    17.5
+   ],
+   [
+    "Duvet",
+    20,
+    14,
+    30,
+    21
+   ],
+   [
+    "Bedspread",
+    15,
+    10.5,
+    25,
+    17.5
+   ],
+   [
+    "Face Towel",
+    6,
+    4.2,
+    10,
+    7
+   ],
+   [
+    "Hair Towel",
+    8,
+    5.6,
+    10,
+    7
+   ],
+   [
+    "Hand Towel",
+    8,
+    5.6,
+    10,
+    7
+   ],
+   [
+    "MOP",
+    6,
+    4.2,
+    10,
+    7
+   ],
+   [
+    "Napkin/Duster",
+    3,
+    2.1,
+    5,
+    3.5
+   ]
+  ]
+ },
+ "bags": [
+  [
+   "Hand Bag small/Purse",
+   80,
+   120
+  ],
+  [
+   "Handbag - Big / Oversized",
+   150,
+   200
+  ],
+  [
+   "Suitcase",
+   150,
+   200
+  ],
+  [
+   "Bag Pack",
+   100,
+   150
+  ],
+  [
+   "Leather Bag - Small",
+   100,
+   150
+  ],
+  [
+   "Leather Bag -  Big",
+   150,
+   200
+  ],
+  [
+   "Trolley Bag",
+   100,
+   150
+  ],
+  [
+   "Briefcase",
+   120,
+   180
+  ]
+ ],
+ "shoes": [
+  [
+   "Formal Shoes",
+   100,
+   150
+  ],
+  [
+   "Boot",
+   120,
+   180
+  ],
+  [
+   "Slippers/ Sandles",
+   80,
+   120
+  ],
+  [
+   "Leather Shoe",
+   120,
+   150
+  ],
+  [
+   "Sports  Shoes",
+   100,
+   150
+  ],
+  [
+   "Sneakers",
+   100,
+   150
+  ]
+ ],
+ "baby_shoes": [
+  [
+   "Shoe",
+   60,
+   80
+  ],
+  [
+   "Slippers/ Sandles",
+   30,
+   40
+  ]
+ ],
+ "home_fabrics": [
+  [
+   "Curtain - Black Out (Sq.Mt)",
+   20,
+   15
+  ],
+  [
+   "Curtain - Normal (Sq.Mt)",
+   15,
+   12
+  ],
+  [
+   "Curtain - Schiffon (Sq.Mt)",
+   12,
+   8
+  ],
+  [
+   "Carpet (Sq.Mt)",
+   30,
+   "--"
+  ],
+  [
+   "Carpet - Handmade (Sq.Mt)",
+   40,
+   "--"
+  ],
+  [
+   "Carpet - Leather (Sq.Mt)",
+   50,
+   "--"
+  ],
+  [
+   "Carpet - Woolen (Sq.Mt)",
+   40,
+   "--"
+  ],
+  [
+   "Chair Cover",
+   20,
+   15
+  ],
+  [
+   "Frill",
+   50,
+   25
+  ]
+ ],
+ "onsite": [
+  [
+   "Mattress - K",
+   300
+  ],
+  [
+   "Mattress - Q",
+   250
+  ],
+  [
+   "Mattress - Single",
+   200
+  ],
+  [
+   "Sofa Cover - B",
+   50
+  ],
+  [
+   "Sofa Cover - M",
+   40
+  ],
+  [
+   "Sofa Cover - S",
+   30
+  ],
+  [
+   "Sofa Shampooing (Per Seat)",
+   70
+  ],
+  [
+   "Table Cloth",
+   15
+  ],
+  [
+   "Table Mat",
+   8
+  ],
+  [
+   "Table Runner",
+   10
+  ],
+  [
+   "Tent",
+   60
+  ]
+ ],
+ "alterations": [
+  [
+   "Alteration - Fitting",
+   60
+  ],
+  [
+   "Alteration - Minor",
+   40
+  ],
+  [
+   "Fixing Tape on Curtains",
+   50
+  ],
+  [
+   "Tape Charges (Per Mtr)",
+   20
+  ]
+ ]
+}

@@ -1,48 +1,45 @@
 # Dima Laundry
 
-> Dima Laundry LLC is a Dubai laundry and dry cleaning company operating since 2001, with branches across Dubai and its own cleaning facilities in Al Quoz. It serves households and businesses with free pickup and delivery. Phone 800 DIMA (3462).
+> Dima Laundry LLC is a Dubai laundry and dry cleaning company operating since 2001. It runs 8 retail branches (open 10am to 10pm daily) and 3 processing centres in Al Quoz (open 24 hours), cleans every item in-house, and offers pickup and delivery across Dubai. Prices start at AED 14 for a shirt and AED 48 for a two piece suit. Phone 800 DIMA (3462). WhatsApp +971 50 639 8093. Commercial +971 56 998 4493. Email info@dimalaundry.com.
 
 Mobile app: iOS https://apps.apple.com/ae/app/dima-laundry-dry-cleaning/id6738209489 | Android https://play.google.com/store/apps/details?id=com.cleancloudapp.dimalaundry
 
 ## Key pages
 - [Services](https://www.dimalaundry.com/services)
 - [Prices](https://www.dimalaundry.com/prices)
-- [Branches](https://www.dimalaundry.com/branches)
-- [Business laundry](https://www.dimalaundry.com/business)
+- [Locations](https://www.dimalaundry.com/branches)
+- [Commercial laundry](https://www.dimalaundry.com/business)
 - [FAQ](https://www.dimalaundry.com/faq)
 - [About](https://www.dimalaundry.com/about-us)
 - [Contact](https://www.dimalaundry.com/contact)
 
 ## Services
 - [Dry cleaning](https://www.dimalaundry.com/services/dry-cleaning)
-- [Wash and fold](https://www.dimalaundry.com/services/wash-and-fold)
-- [Ironing and steam press](https://www.dimalaundry.com/services/ironing)
-- [Abaya and kandura](https://www.dimalaundry.com/services/abaya-kandura-cleaning)
-- [Wedding dress](https://www.dimalaundry.com/services/wedding-dress-cleaning)
+- [Everyday laundry](https://www.dimalaundry.com/services/wash-and-fold)
+- [Ironing and pressing](https://www.dimalaundry.com/services/ironing)
+- [Abaya and kandura care](https://www.dimalaundry.com/services/abaya-kandura-cleaning)
+- [Evening and wedding dresses](https://www.dimalaundry.com/services/wedding-dress-cleaning)
 - [Express laundry](https://www.dimalaundry.com/services/express-laundry)
-- [Alterations](https://www.dimalaundry.com/services/alterations)
 - [Shoe cleaning](https://www.dimalaundry.com/services/shoe-cleaning)
 - [Bag cleaning](https://www.dimalaundry.com/services/bag-cleaning)
+- [Alterations](https://www.dimalaundry.com/services/alterations)
 - [Carpet cleaning](https://www.dimalaundry.com/services/carpet-cleaning)
-- [Sofa cleaning](https://www.dimalaundry.com/services/sofa-cleaning)
+- [Sofa and mattress cleaning](https://www.dimalaundry.com/services/sofa-cleaning)
 - [Curtain cleaning](https://www.dimalaundry.com/services/curtain-cleaning)
 
 ## Branches
-- [Dubai Marina](https://www.dimalaundry.com/branches/dubai-marina)
-- [JVC](https://www.dimalaundry.com/branches/jvc)
-- [Al Sufouh](https://www.dimalaundry.com/branches/al-sufouh)
-- [Jumeirah](https://www.dimalaundry.com/branches/jumeirah)
-- [Umm Suqeim](https://www.dimalaundry.com/branches/umm-suqeim)
-- [Karama](https://www.dimalaundry.com/branches/karama)
-- [Downtown Dubai](https://www.dimalaundry.com/branches/downtown-dubai)
-- [Trade Centre](https://www.dimalaundry.com/branches/trade-centre)
-- [Garhoud](https://www.dimalaundry.com/branches/garhoud)
-- [Silicon Oasis](https://www.dimalaundry.com/branches/silicon-oasis)
-- [Sobha Hartland](https://www.dimalaundry.com/branches/sobha-hartland)
-- [Head office](https://www.dimalaundry.com/branches/al-quoz-head-office)
+- [Dubai Marina (Marinascape)](https://www.dimalaundry.com/branches/dubai-marina): Marinascape Mall, 5 Al Tarres St, Dubai Marina, Dubai
+- [Dubai Marina (Crown)](https://www.dimalaundry.com/branches/dubai-marina-crown): 1st floor, inside Carrefour Market, King Salman Bin Abdulaziz Al Saud Street, Dubai Marina, Dubai
+- [Al Sufouh](https://www.dimalaundry.com/branches/al-sufouh): Lavender Gardens Suites, Al Sufouh 1, Dubai
+- [Jumeirah](https://www.dimalaundry.com/branches/jumeirah): Aswaaq Supermarket, 365 Al Wasl Road, Dubai
+- [Downtown Dubai](https://www.dimalaundry.com/branches/downtown-dubai): Dunya Tower, 1/2 Al Ohood Street, Business Bay, Dubai
+- [Sheikh Zayed Road](https://www.dimalaundry.com/branches/sheikh-zayed-road): Lifco, 60 Zabeel Tower, Sheikh Zayed Road, Dubai
+- [Karama](https://www.dimalaundry.com/branches/karama): Spinneys, 32 28B Street, Karama, Dubai
+- [Damac Aykon City](https://www.dimalaundry.com/branches/damac-aykon-city): Inside Fairmart, Tower C, Damac Aykon City, Dubai
+- [Processing centres](https://www.dimalaundry.com/branches/al-quoz-head-office)
 
-## Business
-- [Hotel laundry](https://www.dimalaundry.com/business/hotels)
+## Commercial
+- [Hotels](https://www.dimalaundry.com/business/hotels)
 - [Holiday homes and Airbnb](https://www.dimalaundry.com/business/holiday-homes)
 - [Restaurants and cafes](https://www.dimalaundry.com/business/restaurants)
 - [Salons, spas and gyms](https://www.dimalaundry.com/business/salons-spas-gyms)
