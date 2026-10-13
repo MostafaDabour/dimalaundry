@@ -10,4 +10,4 @@ All content is generated. Do not edit the HTML files directly.
 - Page layouts: `src/pages.py` and `src/home.py`
 - Styles and scripts: `src/site.css`, `src/site.js`
 
-Rebuild with `python3 src/build.py`, then commit and push. Cloudflare deploys automatically.
+Pages are written to `public/`, which is what Cloudflare serves. Rebuild with `python3 src/build.py`, then commit and push. Cloudflare deploys automatically.

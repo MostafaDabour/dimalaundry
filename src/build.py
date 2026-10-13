@@ -8,7 +8,7 @@ import html, json, os, re, shutil, sys
 from urllib.parse import quote_plus
 
 SRC = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(SRC)
+ROOT = os.path.join(os.path.dirname(SRC), "public")
 sys.path.insert(0, SRC)
 import content as C  # noqa: E402
 
