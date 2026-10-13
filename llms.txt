@@ -1,0 +1,50 @@
+# Dima Laundry
+
+> Dima Laundry LLC is a Dubai laundry and dry cleaning company operating since 2001, with branches across Dubai and its own cleaning facilities in Al Quoz. It serves households and businesses with free pickup and delivery. Phone 800 DIMA (3462).
+
+Mobile app: iOS https://apps.apple.com/ae/app/dima-laundry-dry-cleaning/id6738209489 | Android https://play.google.com/store/apps/details?id=com.cleancloudapp.dimalaundry
+
+## Key pages
+- [Services](https://www.dimalaundry.com/services)
+- [Prices](https://www.dimalaundry.com/prices)
+- [Branches](https://www.dimalaundry.com/branches)
+- [Business laundry](https://www.dimalaundry.com/business)
+- [FAQ](https://www.dimalaundry.com/faq)
+- [About](https://www.dimalaundry.com/about-us)
+- [Contact](https://www.dimalaundry.com/contact)
+
+## Services
+- [Dry cleaning](https://www.dimalaundry.com/services/dry-cleaning)
+- [Wash and fold](https://www.dimalaundry.com/services/wash-and-fold)
+- [Ironing and steam press](https://www.dimalaundry.com/services/ironing)
+- [Abaya and kandura](https://www.dimalaundry.com/services/abaya-kandura-cleaning)
+- [Wedding dress](https://www.dimalaundry.com/services/wedding-dress-cleaning)
+- [Express laundry](https://www.dimalaundry.com/services/express-laundry)
+- [Alterations](https://www.dimalaundry.com/services/alterations)
+- [Shoe cleaning](https://www.dimalaundry.com/services/shoe-cleaning)
+- [Bag cleaning](https://www.dimalaundry.com/services/bag-cleaning)
+- [Carpet cleaning](https://www.dimalaundry.com/services/carpet-cleaning)
+- [Sofa cleaning](https://www.dimalaundry.com/services/sofa-cleaning)
+- [Curtain cleaning](https://www.dimalaundry.com/services/curtain-cleaning)
+
+## Branches
+- [Dubai Marina](https://www.dimalaundry.com/branches/dubai-marina)
+- [JVC](https://www.dimalaundry.com/branches/jvc)
+- [Al Sufouh](https://www.dimalaundry.com/branches/al-sufouh)
+- [Jumeirah](https://www.dimalaundry.com/branches/jumeirah)
+- [Umm Suqeim](https://www.dimalaundry.com/branches/umm-suqeim)
+- [Karama](https://www.dimalaundry.com/branches/karama)
+- [Downtown Dubai](https://www.dimalaundry.com/branches/downtown-dubai)
+- [Trade Centre](https://www.dimalaundry.com/branches/trade-centre)
+- [Garhoud](https://www.dimalaundry.com/branches/garhoud)
+- [Silicon Oasis](https://www.dimalaundry.com/branches/silicon-oasis)
+- [Sobha Hartland](https://www.dimalaundry.com/branches/sobha-hartland)
+- [Head office](https://www.dimalaundry.com/branches/al-quoz-head-office)
+
+## Business
+- [Hotel laundry](https://www.dimalaundry.com/business/hotels)
+- [Holiday homes and Airbnb](https://www.dimalaundry.com/business/holiday-homes)
+- [Restaurants and cafes](https://www.dimalaundry.com/business/restaurants)
+- [Salons, spas and gyms](https://www.dimalaundry.com/business/salons-spas-gyms)
+- [Corporate uniforms](https://www.dimalaundry.com/business/corporate-uniforms)
+- [Clinics](https://www.dimalaundry.com/business/clinics)
