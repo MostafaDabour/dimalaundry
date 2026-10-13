@@ -12,4 +12,4 @@ All content is generated. Do not edit the HTML files directly.
 
 Pages are written to `public/`, which is what Cloudflare serves. Rebuild with `python3 src/build.py`, then commit and push. Cloudflare deploys automatically.
 
-Deploys automatically on every push to main.
+Every push to main deploys automatically.
