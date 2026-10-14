@@ -211,7 +211,7 @@ def build_ar(B):
     for x in C.BUSINESS:
         a = A.BUSINESS[x["slug"]]
         path = "/ar/business/" + x["slug"]
-        hero, cs = B.page_hero(path, a["short"], f'{a["h1"]}<span class="kicker">{esc(a["kicker"])}</span>', a["sub"], book_label=quote_btn, lang=AR, book_href="#quote")
+        hero, cs = B.page_hero(path, a["short"], f'{a["h1"]} <span class="kicker">{esc(a["kicker"])}</span>', a["sub"], book_label=quote_btn, lang=AR, book_href="#quote")
         hero = hero.replace(B.wa_link(U["wa_book_text"]), B.wa_link(U["wa_quote_text"], C.BIZ_WA))
         body = "<h2>ما الذي نتولاه</h2>" + bullets(a["items"]) + "<h2>ما الذي يمكنك الاعتماد عليه</h2>" + bullets(a["outcomes"])
         body += "<h2>كيف نعمل</h2>" + steps(A.BIZ_STEPS)

@@ -228,7 +228,7 @@ def build_all(B):
     # ================= BUSINESS PAGES =================
     for x in C.BUSINESS:
         path = "/business/" + x["slug"]
-        hero, cs = B.page_hero(path, x["short"], f'{x["h1"]}<span class="kicker">{esc(x["kicker"])}</span>', x["sub"],
+        hero, cs = B.page_hero(path, x["short"], f'{x["h1"]} <span class="kicker">{esc(x["kicker"])}</span>', x["sub"],
                                book_label="Request a Commercial Quote", wa_text="Hi Dima Laundry, I would like a commercial laundry quote.")
         hero = hero.replace('href="/contact#book">Request a Commercial Quote', 'href="#quote">Request a Commercial Quote').replace(B.wa_link("Hi Dima Laundry, I would like a commercial laundry quote."), B.wa_link("Hi Dima Laundry, I would like a commercial laundry quote.", C.BIZ_WA))
         body = '<h2>What we handle</h2>' + B.bullets(x["items"])
