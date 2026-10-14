@@ -341,9 +341,11 @@ def shell(path, title, desc, body, schemas, noindex=False, lang="en", alt=None):
 def write(path, page, sitemap=True):
     fp = os.path.join(ROOT, "index.html") if path == "/" else os.path.join(ROOT, path.strip("/"), "index.html")
     os.makedirs(os.path.dirname(fp), exist_ok=True)
+    # Arabic home lives at /ar (no trailing slash) so canonicals and links never hit a redirect
+    page = page.replace('href="/ar/"', 'href="/ar"').replace(DOMAIN + '/ar/"', DOMAIN + '/ar"')
     open(fp, "w", encoding="utf-8").write(page)
     if sitemap:
-        PAGES.append(path)
+        PAGES.append("/ar" if path == "/ar/" else path)
 
 
 # ---- photos (public/img, two widths each). key: (width, height, alt en, alt ar, object-position) ----
