@@ -18,8 +18,10 @@ def build_all(B):
     br_by_slug = {b["slug"]: b for b in C.BRANCHES}
 
     # ---- clean old generated pages (keep src, assets) ----
+    import ar_pages
+    B.AR_PATHS.update(ar_pages.paths())
     for d in ["services", "branches", "business", "about-us", "faq", "contact", "prices", "thanks",
-              "best-laundry-services-dubai"]:
+              "best-laundry-services-dubai", "ar", "blog", "privacy", "terms"]:
         p = os.path.join(B.ROOT, d)
         if os.path.isdir(p):
             shutil.rmtree(p)
@@ -162,7 +164,10 @@ def build_all(B):
         body += '<h2>Popular services here</h2><div class="cards">' + "".join(
             f'<a class="card" href="/services/{C.POPULAR[k][0]}"><strong>{C.POPULAR[k][1]}</strong><span>{CARD[C.POPULAR[k][0]]}</span></a>' for k in b["popular"]) + "</div>"
         body += f'<h2>{esc(b["why_h"])}</h2><p>{esc(b["why"])}</p>'
-        body += B.reviews_block(b["reviews"], rating=bool(b.get("rating")))
+        rh = None
+        if b.get("rating"):
+            rh = f'Rated <strong>{b["rating"][0]} from {b["rating"][1]} Google reviews</strong> at this branch (October 2026). <a href="{C.GMAPS[b["gkey"]]}" rel="noopener" target="_blank">Read all reviews on Google</a>'
+        body += B.reviews_block(b["reviews"], live=b["slug"] if b.get("gkey") and b["slug"] != "dubai-marina-crown" else "all", rating_html=rh)
         body += B.faq_html(b["faqs"])
         body += '<p class="nearby">Other branches nearby: ' + ", ".join(f'<a href="/branches/{n}">{esc(br_by_slug[n]["name"])}</a>' for n in b["nearby"]) + ', or <a href="/branches">see all locations</a>.</p>' + B.updated()
         sch = {"@context": "https://schema.org", "@type": "DryCleaningOrLaundry", "@id": B.DOMAIN + path + "#branch",
@@ -364,6 +369,12 @@ def build_all(B):
     from home import build_home
     build_home(B)
 
+    from legal import build_legal
+    from blog import build_blog
+    build_legal(B)
+    build_blog(B)
+    ar_pages.build_ar(B)
+
     # ================= SITEMAP / LLMS / REDIRECTS =================
     order = ["/"] + [p for p in B.PAGES if p != "/"]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
@@ -388,6 +399,10 @@ Mobile app: iOS {C.APP_IOS} | Android {C.APP_ANDROID}
 """ + "".join(f"- [{s['short']}]({B.DOMAIN}/services/{s['slug']})\n" for s in C.SERVICES) + "\n## Branches\n" + "".join(
         f"- [{b['name']}]({B.DOMAIN}/branches/{b['slug']}): {b['address']}\n" for b in C.BRANCHES) + f"- [Processing centres]({B.DOMAIN}/branches/al-quoz-head-office)\n\n## Commercial\n" + "".join(
         f"- [{x['short']}]({B.DOMAIN}/business/{x['slug']})\n" for x in C.BUSINESS)
+    from blog_posts import POSTS
+    llms += "\n## Guides\n" + "".join(f"- [{x['h1']}]({B.DOMAIN}/blog/{x['slug']}): {x['answer']}\n" for x in POSTS)
+    llms += f"\n## Arabic\n- [ديما لاندري بالعربية]({B.DOMAIN}/ar/)\n- [قائمة الأسعار]({B.DOMAIN}/ar/prices)\n- [الفروع]({B.DOMAIN}/ar/branches)\n"
+    llms += f"\n## Policies\n- [Privacy]({B.DOMAIN}/privacy)\n- [Terms]({B.DOMAIN}/terms)\n"
     open(os.path.join(B.ROOT, "llms.txt"), "w").write(llms)
     redirects = """/about-us/   /about-us   301
 /dimasobha/   /branches   301

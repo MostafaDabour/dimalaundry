@@ -89,8 +89,8 @@ def build_home(B):
 
 <section class="home-sec"><div class="wrap">
   <h2>Trusted by customers across Dubai</h2>
-  <p class="rating-line">{C.RATING_LINE} <a href="{C.GMAPS["q4"]}" rel="noopener" target="_blank">Read all reviews on Google</a></p>
-  <div class="rv-grid">{"".join(B.review_card(k) for k in ["sufouh_2yrs", "q3_satin", "q4_great"])}</div>
+  <p class="rating-line">{C.RATING_LINE} <a href="{C.GMAPS["karama"]}" rel="noopener" target="_blank">Read all reviews on Google</a></p>
+  <div class="rv-grid" data-live="all" data-lang="en">{"".join(B.review_card(k) for k in ["sufouh_2yrs", "karama_raju", "jumeirah_7yrs", "szr_6yrs", "q3_satin", "marina_zeeshan"])}</div>
 </div></section>
 
 <section class="home-sec tint"><div class="wrap">

@@ -21,8 +21,13 @@ GMAPS = {
     "q3": "https://www.google.com/maps/place/?q=place_id:ChIJPahJ_LlrXz4RBd1Lm0bkoH8",
     "f3": "https://www.google.com/maps/place/?q=place_id:ChIJgTqXI65rXz4RRWovjL8ZuF0",
     "crown": "https://www.google.com/maps/place/?q=place_id:ChIJET00KK5rXz4RaSAjaKpdnrU",
+    "marina": "https://www.google.com/maps/place/?q=place_id:ChIJTbiBTBtrXz4RnDVogr_MZvE",
+    "jumeirah": "https://www.google.com/maps/place/?q=place_id:ChIJ8ay36ZFDXz4RZ2L7zsU7xcA",
+    "downtown": "https://www.google.com/maps/place/?q=place_id:ChIJPfrWwDxpXz4RwoUXIm-MOBw",
+    "szr": "https://www.google.com/maps/place/?q=place_id:ChIJF-NCOztDXz4RXTCOvi5IHOo",
+    "karama": "https://www.google.com/maps/place/?q=place_id:ChIJ9Rq_bEdDXz4RqjU51zOA-q4",
 }
-RATING_LINE = 'Rated <strong>4.6 from 225 Google reviews</strong> at our Al Quoz 4 centre and <strong>4.8 from 139</strong> at Al Sufouh (October 2026).'
+RATING_LINE = 'Rated <strong>4.8 from 182 Google reviews</strong> at Karama, <strong>4.8 from 139</strong> at Al Sufouh and <strong>4.7 from 129</strong> at Jumeirah (October 2026).'
 REVIEWS = {
     "sufouh_2yrs": ("I've been using Dima Dry Cleaning for over two years now, and I genuinely can't recommend them enough. The staff is always so friendly, kind, and incredibly responsive. They go out of their way to make sure everything is just right.", "Al Sufouh branch", "sufouh"),
     "sufouh_excellent": ("Excellent service, prompt delivery, perfect cleaning, perfect packing and clothes hanging. Special attribute to Mr. Chetman (counter mgr) and Mr. Veerpal (driver) for top notch attention and customer courtesy.", "Al Sufouh branch", "sufouh"),
@@ -30,6 +35,16 @@ REVIEWS = {
     "sufouh_linen": ("Clean and fresh. I always use Dima Laundry for all my bed linens, smell fresh. Highly recommend.", "Al Sufouh branch", "sufouh"),
     "q4_great": ("Great service! Clothes came back clean, fresh, and on time. Staff was friendly and attentive. Highly recommend!", "Al Quoz 4 centre", "q4"),
     "q3_satin": ("Reasonable price with high quality standard. They are professional dealing with delicate items. I gave them my fav satin dress with coffee stains and the other laundry are not able to remove but DIMA did a very good job with no trace of stains.", "Al Quoz head office", "q3"),
+    "marina_zeeshan": ("Zeeshan is always very helpful and his service is 10/10 - items can be returned in less than 2 days if required. The most competitive rates won't go anywhere else for dry cleaning in the marina!!", "Dubai Marina, Marinascape", "marina"),
+    "marina_nithin": ("Their service is very good I like their dry cleaning always perfect service and delivery on time staff Nithin is also friendly totally highly recommended.", "Dubai Marina, Marinascape", "marina"),
+    "jumeirah_7yrs": ("The team is very responsive anytime of the day, any day and to top it quite a good quality service. Always on time, and have never let me down whenever I needed it to be done on an urgent basis in the past 7 years. Whether you want the clothes folded or on hangers, not a problem. Certainly value for money", "Jumeirah, Aswaaq", "jumeirah"),
+    "jumeirah_pickup": ("Very professional.. They picked up and delivered promptly. The pick up process was very efficient and smooth the service fills the gap perfectly! Very fast and efficient. Great customer service. Would recommend it..!!", "Jumeirah, Aswaaq", "jumeirah"),
+    "downtown_door": ("These guys are very good. I give my clothes twice a week sometimes more. They come and deliver to my door. And they are very efficient and nice. I would highly recommend them!", "Downtown, Dunya Tower", "downtown"),
+    "downtown_curtains": ("Reliable and convinience, price is reasonable compare to other laundry, quality you can trust, my carpet and curtains perfectly cleaned and smell fresh..Professional staff, they deliver my curtains and carpet ahead of time.", "Downtown, Dunya Tower", "downtown"),
+    "szr_6yrs": ("Me and my family and my friends have been using Dima Laundry for about 6 years. Pickup and delivery are always on time. The service is very good. I never got a chance to complain.", "Sheikh Zayed Road, Lifco", "szr"),
+    "szr_dinesh": ("We are very happy with your staff by the name of Dinesh. He is very polite and cool person. He do the delivery and pick ups on time very smart satisfy from his job.", "Sheikh Zayed Road, Lifco", "szr"),
+    "karama_raju": ("I've been using Dima for a while now and they are fantastic. They do an excellent job with my clothes every single time. A special thank you to Raju, who is always so friendly and helpful. Amazing service!", "Karama, Spinneys", "karama"),
+    "karama_48h": ("I had an excellent experience with this laundry service during my business visit to Dubai. I urgently needed my dress ironed and dry-cleaned, and Mr. Raj Kumar was extremely helpful and professional. He ensured everything was perfectly done and delivered within 48 hours.", "Karama, Spinneys", "karama"),
     "f3_b2b": ("Good laundry and reliable, dealing with linen, towels, uniforms, carpets and guest laundry. Timely washing with delivery and pickup available.", "Al Quoz Facility 3", "f3"),
 }
 
@@ -59,7 +74,7 @@ BRANCHES = [
             ("Does Dima Laundry collect from JBR?", "Yes. Dima Laundry picks up and delivers across Dubai Marina, JBR, Dubai Harbour and Bluewaters. Book on WhatsApp, by phone or in the app."),
             ("What are the Marinascape branch hours?", "The Dima Laundry Marinascape branch is open 10am to 10pm, every day."),
         ],
-        "nearby": ["dubai-marina-crown", "al-sufouh"], "reviews": ["q4_great", "sufouh_linen"],
+        "nearby": ["dubai-marina-crown", "al-sufouh"], "reviews": ["marina_zeeshan", "marina_nithin"], "rating": ("4.7", "96"), "gkey": "marina",
     },
     {
         "slug": "dubai-marina-crown", "name": "Dubai Marina (Crown)", "area": "Dubai Marina", "place": "Carrefour Market, Marina Crown",
@@ -77,7 +92,7 @@ BRANCHES = [
             ("Is there a dry cleaner inside Carrefour Dubai Marina?", "Yes. Dima Laundry runs a dry cleaning and laundry counter on the 1st floor of Carrefour Market on King Salman Bin Abdulaziz Al Saud Street, open 10am to 10pm daily."),
             ("Does the Crown branch cover JLT?", "Yes. Dima Laundry collects from and delivers to JLT, Dubai Marina and the Media City and Internet City area."),
         ],
-        "nearby": ["dubai-marina", "al-sufouh"], "reviews": ["q4_great"],
+        "nearby": ["dubai-marina", "al-sufouh"], "reviews": ["marina_zeeshan", "q4_great"], "gkey": "crown",
     },
     {
         "slug": "al-sufouh", "name": "Al Sufouh", "area": "Al Sufouh", "place": "Lavender Gardens Suites",
@@ -96,7 +111,7 @@ BRANCHES = [
             ("How is Dima Laundry Al Sufouh rated?", "Dima Laundry Al Sufouh is rated 4.8 from 139 Google reviews (October 2026)."),
         ],
         "nearby": ["dubai-marina-crown", "dubai-marina"],
-        "reviews": ["sufouh_2yrs", "sufouh_excellent", "sufouh_chetan", "sufouh_linen"], "rating": ("4.8", "139"),
+        "reviews": ["sufouh_2yrs", "sufouh_excellent", "sufouh_chetan", "sufouh_linen"], "rating": ("4.8", "139"), "gkey": "sufouh",
     },
     {
         "slug": "jumeirah", "name": "Jumeirah", "area": "Jumeirah", "place": "Aswaaq Supermarket, Al Wasl Road",
@@ -114,7 +129,7 @@ BRANCHES = [
             ("Does Dima Laundry collect from villas in Jumeirah?", "Yes. Dima Laundry picks up and delivers across Jumeirah, Al Wasl, Umm Suqeim and Al Safa."),
             ("How much is abaya cleaning at Dima Laundry Jumeirah?", "Abaya cleaning and pressing starts at AED 20, or AED 30 for delicate abayas. Prices are the same at every branch."),
         ],
-        "nearby": ["sheikh-zayed-road", "karama"], "reviews": ["q3_satin", "sufouh_linen"],
+        "nearby": ["sheikh-zayed-road", "karama"], "reviews": ["jumeirah_7yrs", "jumeirah_pickup"], "rating": ("4.7", "129"), "gkey": "jumeirah",
     },
     {
         "slug": "downtown-dubai", "name": "Downtown Dubai", "area": "Downtown Dubai", "place": "Dunya Tower",
@@ -132,7 +147,7 @@ BRANCHES = [
             ("How much is suit dry cleaning in Downtown Dubai?", "Dima Laundry cleans and presses a two piece suit from AED 48, or AED 80 with premium service."),
             ("Does Dima Laundry collect from Business Bay towers?", "Yes. Dima Laundry collects from towers and offices across Business Bay, Downtown and DIFC."),
         ],
-        "nearby": ["damac-aykon-city", "sheikh-zayed-road"], "reviews": ["q3_satin", "q4_great"],
+        "nearby": ["damac-aykon-city", "sheikh-zayed-road"], "reviews": ["downtown_door", "downtown_curtains"], "rating": ("4.4", "98"), "gkey": "downtown",
     },
     {
         "slug": "sheikh-zayed-road", "name": "Sheikh Zayed Road", "area": "Sheikh Zayed Road", "place": "Lifco, Zabeel Tower",
@@ -149,7 +164,7 @@ BRANCHES = [
             ("Is there a laundry near the World Trade Centre?", "Yes. Dima Laundry is inside Lifco, 60 Zabeel Tower on Sheikh Zayed Road."),
             ("Does Dima Laundry clean office uniforms?", "Yes. Dima Laundry cleans staff uniforms on a schedule for businesses. See commercial laundry."),
         ],
-        "nearby": ["downtown-dubai", "karama"], "reviews": ["q4_great", "f3_b2b"],
+        "nearby": ["downtown-dubai", "karama"], "reviews": ["szr_6yrs", "szr_dinesh"], "rating": ("4.8", "87"), "gkey": "szr",
     },
     {
         "slug": "karama", "name": "Karama", "area": "Karama", "place": "Spinneys Karama",
@@ -167,7 +182,7 @@ BRANCHES = [
             ("Does Dima Laundry clean sarees?", "Yes. Saree cleaning and pressing at Dima Laundry is AED 40, or AED 50 with premium service."),
             ("How much is ironing in Karama?", "Pressing only starts at AED 9.80 for a shirt. Prices are the same at every Dima branch."),
         ],
-        "nearby": ["sheikh-zayed-road", "jumeirah"], "reviews": ["q4_great", "q3_satin"],
+        "nearby": ["sheikh-zayed-road", "jumeirah"], "reviews": ["karama_raju", "karama_48h"], "rating": ("4.8", "182"), "gkey": "karama",
     },
     {
         "slug": "damac-aykon-city", "name": "Damac Aykon City", "area": "Damac Aykon City", "place": "Fairmart, Tower C",

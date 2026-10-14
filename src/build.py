@@ -126,27 +126,62 @@ def faq_html(qas, heading="Frequently asked questions"):
     return f'<h2>{heading}</h2>{items}'
 
 
-def crumbs(path, name):
-    segs = [s for s in path.strip("/").split("/") if s]
-    labels = {"services": ("Services", "/services"), "branches": ("Locations", "/branches"), "business": ("Commercial Laundry", "/business")}
-    trail = [("Home", "/")]
+UI = {
+    "en": {
+        "home": "Home", "services": "Services", "prices": "Prices", "locations": "Locations", "commercial": "Commercial Laundry",
+        "about": "About", "book": "Book a Pickup", "wa_us": "WhatsApp Us", "wa_dima": "WhatsApp Dima", "faq_h": "Frequently asked questions",
+        "skip": "Skip to content", "app_bar": "Get the Dima Laundry app", "open": "Open", "close": "Close",
+        "foot_intro": f"Laundry and dry cleaning in Dubai since 2001. Dima Laundry LLC, {C.HQ_ADDRESS}, Dubai.",
+        "toll": "Toll free", "wa": "WhatsApp", "biz": "Commercial", "foot_base": "Dima Laundry LLC. Serving Dubai since 2001.",
+        "faq": "FAQ", "contact": "Contact", "compare": "Compare Dubai laundries", "blog": "Laundry guides", "privacy": "Privacy", "terms": "Terms",
+        "call": "Call", "book_short": "Book Pickup", "chat": "Chat on WhatsApp", "proc": "Processing centres",
+        "dl_on": "Download on the", "get_on": "Get it on", "lang_switch": "العربية", "updated": "Last updated October 2026.",
+        "wa_book_text": "Hi Dima Laundry, I would like to book a pickup.", "wa_quote_text": "Hi Dima Laundry, I would like a commercial laundry quote.",
+    },
+    "ar": {
+        "home": "الرئيسية", "services": "الخدمات", "prices": "الأسعار", "locations": "الفروع", "commercial": "مغسلة الشركات",
+        "about": "من نحن", "book": "احجز استلام", "wa_us": "راسلنا واتساب", "wa_dima": "واتساب ديما", "faq_h": "الأسئلة الشائعة",
+        "skip": "انتقل إلى المحتوى", "app_bar": "حمّل تطبيق ديما لاندري", "open": "فتح", "close": "إغلاق",
+        "foot_intro": "مغسلة وتنظيف جاف في دبي منذ 2001. ديما لاندري ذ.م.م، شارع 24a رقم 22، القوز الصناعية 3، دبي.",
+        "toll": "الرقم المجاني", "wa": "واتساب", "biz": "الشركات", "foot_base": "ديما لاندري ذ.م.م. في خدمة دبي منذ 2001.",
+        "faq": "الأسئلة الشائعة", "contact": "تواصل معنا", "compare": "مقارنة مغاسل دبي", "blog": "أدلة العناية بالملابس", "privacy": "الخصوصية", "terms": "الشروط",
+        "call": "اتصل", "book_short": "احجز", "chat": "تحدث معنا واتساب", "proc": "مراكز التنظيف",
+        "dl_on": "حمّله من", "get_on": "احصل عليه من", "lang_switch": "English", "updated": "آخر تحديث: أكتوبر 2026.",
+        "wa_book_text": "مرحبا ديما لاندري، أرغب بحجز استلام للملابس.", "wa_quote_text": "مرحبا ديما لاندري، أرغب بعرض سعر لخدمة مغسلة الشركات.",
+    },
+}
+
+
+def pfx(lang):
+    return "/ar" if lang == "ar" else ""
+
+
+def crumbs(path, name, lang="en"):
+    u = UI[lang]
+    base = pfx(lang)
+    rel = path[len(base):] if base and path.startswith(base) else path
+    segs = [s for s in rel.strip("/").split("/") if s]
+    labels = {"services": (u["services"], base + "/services"), "branches": (u["locations"], base + "/branches"),
+              "business": (u["commercial"], base + "/business"), "blog": (u["blog"], base + "/blog")}
+    trail = [(u["home"], base + "/")]
     for i, s in enumerate(segs):
         if i == len(segs) - 1:
-            trail.append((name, "/" + "/".join(segs)))
+            trail.append((name, path))
         else:
-            trail.append(labels.get(s, (s.title(), "/" + s)))
+            trail.append(labels.get(s, (s.title(), base + "/" + s)))
     htm = '<nav class="crumbs" aria-label="Breadcrumb"><ol>' + "".join(
-        f'<li><a href="{u}">{esc(t)}</a></li>' if i < len(trail) - 1 else f'<li aria-current="page">{esc(t)}</li>'
-        for i, (t, u) in enumerate(trail)) + "</ol></nav>"
+        f'<li><a href="{u_}">{esc(t)}</a></li>' if i < len(trail) - 1 else f'<li aria-current="page">{esc(t)}</li>'
+        for i, (t, u_) in enumerate(trail)) + "</ol></nav>"
     sch = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": i + 1, "name": t, "item": DOMAIN + u} for i, (t, u) in enumerate(trail)]}
+        {"@type": "ListItem", "position": i + 1, "name": t, "item": DOMAIN + u_} for i, (t, u_) in enumerate(trail)]}
     return htm, sch
 
 
-def app_badges(cls=""):
+def app_badges(cls="", lang="en"):
+    u = UI[lang]
     return (f'<div class="app-badges {cls}">'
-            f'<a class="store" href="{C.APP_IOS}" rel="noopener" target="_blank">{APPLE_SVG}<span><small>Download on the</small> App Store</span></a>'
-            f'<a class="store" href="{C.APP_ANDROID}" rel="noopener" target="_blank">{GPLAY_SVG}<span><small>Get it on</small> Google Play</span></a></div>')
+            f'<a class="store" href="{C.APP_IOS}" rel="noopener" target="_blank">{APPLE_SVG}<span><small>{u["dl_on"]}</small> App Store</span></a>'
+            f'<a class="store" href="{C.APP_ANDROID}" rel="noopener" target="_blank">{GPLAY_SVG}<span><small>{u["get_on"]}</small> Google Play</span></a></div>')
 
 
 def wa_link(text=None, number=None):
@@ -154,57 +189,89 @@ def wa_link(text=None, number=None):
     return f"https://wa.me/{number}" + (f"?text={quote_plus(text)}" if text else "")
 
 
-def btns(book_label="Book a Pickup", wa_text=None, extra=""):
-    return (f'<div class="hero-actions"><a class="btn btn-main" href="/contact#book">{book_label}</a>'
-            f'<a class="btn btn-line" href="{wa_link(wa_text or "Hi Dima Laundry, I would like to book a pickup.")}">WhatsApp Us</a>{extra}</div>')
+def btns(book_label=None, wa_text=None, extra="", lang="en", book_href=None):
+    u = UI[lang]
+    book_label = book_label or u["book"]
+    book_href = book_href or pfx(lang) + "/contact#book"
+    return (f'<div class="hero-actions"><a class="btn btn-main" href="{book_href}">{book_label}</a>'
+            f'<a class="btn btn-line" href="{wa_link(wa_text or u["wa_book_text"])}">{u["wa_us"]}</a>{extra}</div>')
 
 
 # ---------- page shell ----------
-def nav(active):
-    items = [("Services", "/services"), ("Prices", "/prices"), ("Locations", "/branches"),
-             ("Commercial Laundry", "/business"), ("About", "/about-us")]
-    lis = "".join(f'<li><a href="{u}"{" aria-current=\"page\"" if (active == u or active.startswith(u + "/")) else ""}>{t}</a></li>' for t, u in items)
-    return f'''<div class="app-bar" hidden><span>Get the Dima Laundry app</span><a class="app-bar-go" data-ios="{C.APP_IOS}" data-android="{C.APP_ANDROID}" href="{C.APP_IOS}">Open</a><button type="button" class="app-bar-x" aria-label="Close">&times;</button></div>
+def nav(active, lang="en", alt=None):
+    u = UI[lang]
+    b = pfx(lang)
+    items = [(u["services"], b + "/services"), (u["prices"], b + "/prices"), (u["locations"], b + "/branches"),
+             (u["commercial"], b + "/business"), (u["about"], b + "/about-us")]
+    lis = "".join(f'<li><a href="{x}"{" aria-current=\"page\"" if (active == x or active.startswith(x + "/")) else ""}>{t}</a></li>' for t, x in items)
+    sw = f'<a class="lang-sw" href="{alt}" hreflang="{"en" if lang == "ar" else "ar"}" lang="{"en" if lang == "ar" else "ar"}">{u["lang_switch"]}</a>' if alt else ""
+    return f'''<div class="app-bar" hidden><span>{u["app_bar"]}</span><a class="app-bar-go" data-ios="{C.APP_IOS}" data-android="{C.APP_ANDROID}" href="{C.APP_IOS}">{u["open"]}</a><button type="button" class="app-bar-x" aria-label="{u["close"]}">&times;</button></div>
 <header class="site-head">
   <div class="wrap head-row">
-    <a class="logo" href="/"><img src="/logo.png" alt="Dima Laundry" width="141" height="44"></a>
+    <a class="logo" href="{b}/"><img src="/logo.png" alt="Dima Laundry" width="141" height="44"></a>
     <nav aria-label="Main"><ul>{lis}</ul></nav>
-    <div class="head-cta"><a class="tel" href="tel:{C.TEL}">{C.TOLL}</a><a class="btn btn-main btn-book" href="/contact#book">Book a Pickup</a></div>
+    <div class="head-cta">{sw}<a class="tel" href="tel:{C.TEL}" dir="ltr">{C.TOLL}</a><a class="btn btn-main btn-book" href="{b}/contact#book">{u["book"]}</a></div>
   </div>
 </header>'''
 
 
-def footer():
+def footer(lang="en"):
+    u = UI[lang]
+    b = pfx(lang)
     def col(title, m):
-        return f'<div><h2>{title}</h2><ul>' + "".join(f'<li><a href="{u}">{esc(t)}</a></li>' for t, u in m) + "</ul></div>"
-    svc = [(s["short"], "/services/" + s["slug"]) for s in C.SERVICES]
-    loc = [(b["name"], "/branches/" + b["slug"]) for b in C.BRANCHES] + [("Processing centres", "/branches/al-quoz-head-office")]
-    biz = [("Commercial laundry", "/business")] + [(b["short"], "/business/" + b["slug"]) for b in C.BUSINESS]
+        return f'<div><h2>{title}</h2><ul>' + "".join(f'<li><a href="{x}">{esc(t)}</a></li>' for t, x in m) + "</ul></div>"
+    if lang == "ar":
+        import content_ar as A
+        svc = [(A.SERVICES[s["slug"]]["short"], b + "/services/" + s["slug"]) for s in C.SERVICES]
+        loc = [(A.BRANCHES[x["slug"]]["name"], b + "/branches/" + x["slug"]) for x in C.BRANCHES] + [(u["proc"], b + "/branches/al-quoz-head-office")]
+        biz = [(u["commercial"], b + "/business")] + [(A.BUSINESS[x["slug"]]["short"], b + "/business/" + x["slug"]) for x in C.BUSINESS]
+    else:
+        svc = [(s["short"], "/services/" + s["slug"]) for s in C.SERVICES]
+        loc = [(x["name"], "/branches/" + x["slug"]) for x in C.BRANCHES] + [(u["proc"], "/branches/al-quoz-head-office")]
+        biz = [(u["commercial"], "/business")] + [(x["short"], "/business/" + x["slug"]) for x in C.BUSINESS]
     return f'''<div class="foot-wave">{WAVE}</div><footer class="site-foot">
   <div class="wrap foot-grid">
     <div class="foot-brand">
-      <a class="logo" href="/"><img src="/logo-white.png" alt="Dima Laundry" width="167" height="52"></a>
-      <p>Laundry and dry cleaning in Dubai since 2001. Dima Laundry LLC, {esc(C.HQ_ADDRESS)}, Dubai.</p>
-      <p>Toll free <a href="tel:{C.TEL}">{C.TOLL}</a><br>WhatsApp <a href="{wa_link()}">{C.RETAIL}</a><br>Commercial <a href="tel:+971569984493">{C.BIZ}</a><br><a href="mailto:{C.EMAIL}">{C.EMAIL}</a></p>
-      {app_badges("on-dark")}
+      <a class="logo" href="{b}/"><img src="/logo-white.png" alt="Dima Laundry" width="167" height="52"></a>
+      <p>{u["foot_intro"]}</p>
+      <p>{u["toll"]} <a href="tel:{C.TEL}" dir="ltr">{C.TOLL}</a><br>{u["wa"]} <a href="{wa_link()}" dir="ltr">{C.RETAIL}</a><br>{u["biz"]} <a href="tel:+971569984493" dir="ltr">{C.BIZ}</a><br><a href="mailto:{C.EMAIL}">{C.EMAIL}</a></p>
+      {app_badges("on-dark", lang)}
     </div>
-    {col("Services", svc)}
-    {col("Locations", loc)}
-    {col("Commercial Laundry", biz)}
+    {col(u["services"], svc)}
+    {col(u["locations"], loc)}
+    {col(u["commercial"], biz)}
   </div>
-  <div class="wrap foot-base"><span>Dima Laundry LLC. Serving Dubai since 2001.</span><span><a href="/prices">Prices</a> <a href="/faq">FAQ</a> <a href="/contact">Contact</a> <a href="/best-laundry-services-dubai">Compare Dubai laundries</a></span></div>
+  <div class="wrap foot-base"><span>{u["foot_base"]}</span><span><a href="{b}/prices">{u["prices"]}</a> <a href="{b}/faq">{u["faq"]}</a> <a href="/blog">{UI["en"]["blog"]}</a> <a href="{b}/contact">{u["contact"]}</a> <a href="{b}/privacy">{u["privacy"]}</a> <a href="{b}/terms">{u["terms"]}</a> <a href="/best-laundry-services-dubai">{UI["en"]["compare"]}</a></span></div>
 </footer>
-<div class="mobile-bar"><a href="tel:{C.TEL}">Call</a><a href="{wa_link()}">WhatsApp</a><a href="/contact#book" class="mb-book">Book Pickup</a></div>
-<a class="wa-float" href="{wa_link()}" aria-label="Chat with Dima Laundry on WhatsApp">{WA_ICON}<span class="wa-label">Chat on WhatsApp</span></a>'''
+<div class="mobile-bar"><a href="tel:{C.TEL}">{u["call"]}</a><a href="{wa_link()}">{u["wa"]}</a><a href="{b}/contact#book" class="mb-book">{u["book_short"]}</a></div>
+<a class="wa-float" href="{wa_link()}" aria-label="{u["chat"]}">{WA_ICON}<span class="wa-label">{u["chat"]}</span></a>'''
 
 
-def shell(path, title, desc, body, schemas, noindex=False):
+AR_PATHS = set()  # English paths that have an Arabic version
+
+
+def shell(path, title, desc, body, schemas, noindex=False, lang="en", alt=None):
     canon = DOMAIN + path
     t = esc(title)
     d = esc(desc)
     robots = '<meta name="robots" content="noindex">' if noindex else ""
+    hreflang = ""
+    if alt is None:
+        if lang == "en" and path in AR_PATHS:
+            alt = "/ar" + (path if path != "/" else "/")
+        elif lang == "ar":
+            alt = path[3:] or "/"
+    if alt:
+        en_p, ar_p = (path, alt) if lang == "en" else (alt, path)
+        hreflang = (f'<link rel="alternate" hreflang="en" href="{DOMAIN + en_p}">'
+                    f'<link rel="alternate" hreflang="ar" href="{DOMAIN + ar_p}">'
+                    f'<link rel="alternate" hreflang="x-default" href="{DOMAIN + en_p}">')
+    else:
+        hreflang = f'<link rel="alternate" hreflang="{lang}" href="{canon}">'
+    font = '<link rel="preload" href="/fonts/outfit-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>' if lang == "en" else \
+        '<link rel="preload" href="/fonts/ibm-plex-sans-arabic-arabic-700-normal.woff2" as="font" type="font/woff2" crossorigin>'
     page = f'''<!DOCTYPE html>
-<html lang="en">
+<html lang="{lang}" dir="{"rtl" if lang == "ar" else "ltr"}">
 <head>
 <meta charset="utf-8">
 <script>document.documentElement.classList.add("js")</script>
@@ -212,8 +279,9 @@ def shell(path, title, desc, body, schemas, noindex=False):
 <title>{t}</title>
 <meta name="description" content="{d}">{robots}
 <link rel="canonical" href="{canon}">
-<link rel="alternate" hreflang="en" href="{canon}">
+{hreflang}
 <meta property="og:type" content="website">
+<meta property="og:locale" content="{"ar_AE" if lang == "ar" else "en_AE"}">
 <meta property="og:title" content="{t}">
 <meta property="og:description" content="{d}">
 <meta property="og:url" content="{canon}">
@@ -221,21 +289,21 @@ def shell(path, title, desc, body, schemas, noindex=False):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#8C267D">
-<link rel="preload" href="/fonts/outfit-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+{font}
 <style>{CSS}</style>
 {"".join(ld(s) for s in schemas)}
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-{nav(path)}
+<a class="skip" href="#main">{UI[lang]["skip"]}</a>
+{nav(path, lang, alt)}
 <main id="main">
 {body}
 </main>
-{footer()}
+{footer(lang)}
 <script>{JS}</script>
 </body>
 </html>'''
-    for bad in ("—", "–"):
+    for bad in ("\u2014", "\u2013"):
         assert bad not in page, f"dash in {path}"
     return page
 
@@ -248,16 +316,17 @@ def write(path, page, sitemap=True):
         PAGES.append(path)
 
 
-def page_hero(path, name, h1, sub, book_label="Book a Pickup", wa_text=None, extra_btn=""):
-    ch, cs = crumbs(path, name)
+def page_hero(path, name, h1, sub, book_label=None, wa_text=None, extra_btn="", lang="en", book_href=None):
+    ch, cs = crumbs(path, name, lang)
     return (f'<section class="page-hero"><div class="bubbles" data-count="7" aria-hidden="true"></div><div class="wrap">{ch}'
             f'<h1>{h1}</h1><div class="answer tag-card"><span class="tag-hole" aria-hidden="true"></span><p>{sub}</p></div>'
-            f'{btns(book_label, wa_text, extra_btn)}</div></section>'), cs
+            f'{btns(book_label, wa_text, extra_btn, lang, book_href)}</div></section>'), cs
 
 
-def cta_band(text, book_label="Book a Pickup", wa_text=None):
+def cta_band(text, book_label=None, wa_text=None, lang="en", book_href=None):
+    u = UI[lang]
     return (f'<section class="cta-band"><div class="bubbles" data-count="6" aria-hidden="true"></div><div class="wrap"><p>{text}</p>'
-            f'<div><a class="btn btn-tag" href="/contact#book">{book_label}</a><a class="btn btn-onblue" href="{wa_link(wa_text or "Hi Dima Laundry, I would like to book a pickup.")}">WhatsApp Dima</a></div></div></section>')
+            f'<div><a class="btn btn-tag" href="{book_href or pfx(lang) + "/contact#book"}">{book_label or u["book"]}</a><a class="btn btn-onblue" href="{wa_link(wa_text or u["wa_book_text"])}">{u["wa_dima"]}</a></div></div></section>')
 
 
 def how_steps(steps=None):
@@ -266,60 +335,119 @@ def how_steps(steps=None):
     return f"<ol class=\"steps\">{lis}</ol>"
 
 
-def review_card(k):
+def review_card(k, lang="en"):
     text, place, gkey = C.REVIEWS[k]
+    lbl = "Google review" if lang == "en" else "\u062a\u0642\u064a\u064a\u0645 \u062c\u0648\u062c\u0644"
     return (f'<figure class="rv"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>'
-            f'<blockquote>{esc(text)}</blockquote><figcaption>Google review, <a href="{C.GMAPS[gkey]}" rel="noopener" target="_blank">{esc(place)}</a></figcaption></figure>')
+            f'<blockquote lang="en" dir="ltr">{esc(text)}</blockquote><figcaption>{lbl}, <a href="{C.GMAPS[gkey]}" rel="noopener" target="_blank">{esc(place)}</a></figcaption></figure>')
 
 
-def reviews_block(keys, heading="What customers say on Google", rating=False):
-    rl = f'<p class="rating-line">{C.RATING_LINE} <a href="{C.GMAPS["q4"]}" rel="noopener" target="_blank">Read all reviews on Google</a></p>' if rating else ""
-    return f'<section class="rv-sec"><h2>{heading}</h2>{rl}<div class="rv-grid">{"".join(review_card(k) for k in keys)}</div></section>'
+def reviews_block(keys, heading="What customers say on Google", rating=False, live="all", rating_html=None, lang="en"):
+    if rating_html:
+        rl = f'<p class="rating-line">{rating_html}</p>'
+    elif rating:
+        more = "Read all reviews on Google" if lang == "en" else "\u0627\u0642\u0631\u0623 \u0643\u0644 \u0627\u0644\u062a\u0642\u064a\u064a\u0645\u0627\u062a \u0639\u0644\u0649 \u062c\u0648\u062c\u0644"
+        line = C.RATING_LINE if lang == "en" else C_AR_RATING_LINE()
+        rl = f'<p class="rating-line">{line} <a href="{C.GMAPS["karama"]}" rel="noopener" target="_blank">{more}</a></p>'
+    else:
+        rl = ""
+    attr = f' data-live="{live}" data-lang="{lang}"' if live else ""
+    return f'<section class="rv-sec"><h2>{heading}</h2>{rl}<div class="rv-grid"{attr}>{"".join(review_card(k, lang) for k in keys)}</div></section>'
+
+
+def C_AR_RATING_LINE():
+    import content_ar as A
+    return A.RATING_LINE
 
 
 def bullets(items):
     return "<ul class=\"ticks\">" + "".join(f"<li>{i}</li>" for i in items) + "</ul>"
 
 
-def updated():
-    return '<p class="updated">Last updated October 2026.</p>'
+def updated(lang="en"):
+    return f'<p class="updated">{UI[lang]["updated"]}</p>'
 
 
 # ---------- forms ----------
-def booking_form():
-    return f'''<form class="book-form js-wa-form" id="book" data-wa="{C.WA}" data-intro="New pickup request from the Dima Laundry website" action="https://wa.me/{C.WA}" method="get">
-  <h2>Book a pickup</h2>
-  <p class="small">Send the form and WhatsApp opens with your request filled in. Tap send and the Dima team confirms your pickup time.</p>
+FORM_TXT = {
+    "en": {
+        "book_h": "Book a pickup", "book_p": "Send your details and the Dima team confirms your pickup time by phone or WhatsApp.",
+        "name": "Name", "phone": "Phone", "email": "Email (optional)", "area": "Area", "area_ph": "e.g. Dubai Marina", "address": "Address",
+        "date": "Pickup date", "slot": "Time slot", "slots": ["Morning", "Afternoon", "Evening"], "services": "Services needed",
+        "services_ph": "Dry cleaning, laundry, abayas, curtains...", "heard": "How did you hear about us?",
+        "heard_opts": ["Google", "ChatGPT or another AI assistant", "Instagram", "Friend", "Walked past a branch"], "notes": "Notes",
+        "send": "Request my pickup", "talk": "Prefer to talk? Call", "privacy": "By sending this form you agree to our <a href=\"/privacy\">privacy policy</a>.",
+        "quote_h": "Request a commercial quote", "quote_p": "Send your details and the commercial team replies within one working day. Or call",
+        "company": "Company", "btype": "Business type",
+        "btypes": ["Hotel or serviced apartments", "Holiday homes or Airbnb", "Restaurant or cafe", "Salon or spa", "Gym", "Clinic", "Corporate uniforms", "Other"],
+        "volume": "Weekly volume (kg or pieces)", "cname": "Contact name", "items": "What do you need cleaned?", "items_ph": "Bed linen, towels, uniforms, table linen...",
+        "qsend": "Send quote request", "ok": "Thank you. Your request has reached the Dima team and they will be in touch shortly.",
+        "ok_wa": "Want a faster reply? Message us on WhatsApp", "intro_book": "New pickup request from the Dima Laundry website", "intro_quote": "Commercial laundry quote request from the Dima Laundry website",
+    },
+    "ar": {
+        "book_h": "احجز استلام الملابس", "book_p": "أرسل بياناتك وسيتواصل معك فريق ديما لتأكيد موعد الاستلام عبر الهاتف أو واتساب.",
+        "name": "الاسم", "phone": "رقم الهاتف", "email": "البريد الإلكتروني (اختياري)", "area": "المنطقة", "area_ph": "مثال: دبي مارينا", "address": "العنوان",
+        "date": "تاريخ الاستلام", "slot": "الفترة", "slots": ["صباحا", "بعد الظهر", "مساء"], "services": "الخدمات المطلوبة",
+        "services_ph": "تنظيف جاف، غسيل، عبايات، ستائر...", "heard": "كيف عرفت عنا؟",
+        "heard_opts": ["جوجل", "ChatGPT أو مساعد ذكاء اصطناعي", "إنستغرام", "صديق", "مررت بأحد الفروع"], "notes": "ملاحظات",
+        "send": "اطلب الاستلام", "talk": "تفضّل الاتصال؟ اتصل على", "privacy": "بإرسال النموذج فإنك توافق على <a href=\"/ar/privacy\">سياسة الخصوصية</a>.",
+        "quote_h": "اطلب عرض سعر للشركات", "quote_p": "أرسل بياناتك وسيرد عليك فريق الشركات خلال يوم عمل واحد. أو اتصل على",
+        "company": "اسم الشركة", "btype": "نوع النشاط",
+        "btypes": ["فندق أو شقق فندقية", "بيوت عطلات أو Airbnb", "مطعم أو مقهى", "صالون أو سبا", "نادي رياضي", "عيادة", "زي موظفين", "أخرى"],
+        "volume": "الكمية الأسبوعية (كغ أو قطع)", "cname": "اسم المسؤول", "items": "ما الذي تحتاج تنظيفه؟", "items_ph": "مفارش، مناشف، زي موظفين، مفارش طاولات...",
+        "qsend": "أرسل طلب عرض السعر", "ok": "شكرا لك. وصل طلبك إلى فريق ديما وسيتواصلون معك قريبا.",
+        "ok_wa": "تريد ردا أسرع؟ راسلنا على واتساب", "intro_book": "طلب استلام جديد من موقع ديما لاندري", "intro_quote": "طلب عرض سعر للشركات من موقع ديما لاندري",
+    },
+}
+
+
+def _opts(xs):
+    return "".join(f"<option>{esc(x)}</option>" for x in xs)
+
+
+def booking_form(lang="en"):
+    f = FORM_TXT[lang]
+    return f'''<form class="book-form js-lead-form" id="book" data-form="booking" data-lang="{lang}" data-wa="{C.WA}" data-intro="{esc(f["intro_book"])}" data-ok="{esc(f["ok"])}" data-okwa="{esc(f["ok_wa"])}" action="https://wa.me/{C.WA}" method="get" novalidate>
+  <h2>{f["book_h"]}</h2>
+  <p class="small">{f["book_p"]}</p>
+  <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
   <div class="f-grid">
-    <label>Name<input name="Name" autocomplete="name" required></label>
-    <label>Phone<input name="Phone" type="tel" autocomplete="tel" required></label>
-    <label>Area<input name="Area" placeholder="e.g. Dubai Marina" required></label>
-    <label>Address<input name="Address" autocomplete="street-address"></label>
-    <label>Pickup date<input name="Pickup date" type="date"></label>
-    <label>Time slot<select name="Time slot"><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
-    <label class="wide">Services needed<input name="Services" placeholder="Dry cleaning, laundry, abayas, curtains..."></label>
-    <label class="wide">How did you hear about us?<select name="Heard about us"><option>Google</option><option>ChatGPT or another AI assistant</option><option>Instagram</option><option>Friend</option><option>Walked past a branch</option></select></label>
-    <label class="wide">Notes<textarea name="Notes" rows="3"></textarea></label>
+    <label>{f["name"]}<input name="Name" autocomplete="name" required></label>
+    <label>{f["phone"]}<input name="Phone" type="tel" autocomplete="tel" required dir="ltr"></label>
+    <label>{f["email"]}<input name="Email" type="email" autocomplete="email" dir="ltr"></label>
+    <label>{f["area"]}<input name="Area" placeholder="{f["area_ph"]}" required></label>
+    <label class="wide">{f["address"]}<input name="Address" autocomplete="street-address"></label>
+    <label>{f["date"]}<input name="Pickup date" type="date"></label>
+    <label>{f["slot"]}<select name="Time slot">{_opts(f["slots"])}</select></label>
+    <label class="wide">{f["services"]}<input name="Services" placeholder="{f["services_ph"]}"></label>
+    <label class="wide">{f["heard"]}<select name="Heard about us">{_opts(f["heard_opts"])}</select></label>
+    <label class="wide">{f["notes"]}<textarea name="Notes" rows="3"></textarea></label>
   </div>
-  <button class="btn btn-main" type="submit">Send booking on WhatsApp</button>
-  <p class="small">Prefer to talk? Call <a href="tel:{C.TEL}">{C.TOLL}</a>.</p>
+  <button class="btn btn-main" type="submit">{f["send"]}</button>
+  <p class="small form-msg" role="status" aria-live="polite"></p>
+  <p class="small">{f["talk"]} <a href="tel:{C.TEL}" dir="ltr">{C.TOLL}</a>. {f["privacy"]}</p>
 </form>'''
 
 
-def quote_form():
-    return f'''<form class="book-form js-wa-form" id="quote" data-wa="{C.BIZ_WA}" data-intro="Commercial laundry quote request from the Dima Laundry website" action="https://wa.me/{C.BIZ_WA}" method="get">
-  <h2>Request a commercial quote</h2>
-  <p class="small">Send the form and WhatsApp opens to our commercial team with your details filled in. Or call <a href="tel:+971569984493">{C.BIZ}</a>.</p>
+def quote_form(lang="en"):
+    f = FORM_TXT[lang]
+    return f'''<form class="book-form js-lead-form" id="quote" data-form="business-quote" data-lang="{lang}" data-wa="{C.BIZ_WA}" data-intro="{esc(f["intro_quote"])}" data-ok="{esc(f["ok"])}" data-okwa="{esc(f["ok_wa"])}" action="https://wa.me/{C.BIZ_WA}" method="get" novalidate>
+  <h2>{f["quote_h"]}</h2>
+  <p class="small">{f["quote_p"]} <a href="tel:+971569984493" dir="ltr">{C.BIZ}</a>.</p>
+  <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
   <div class="f-grid">
-    <label>Company<input name="Company" required></label>
-    <label>Business type<select name="Business type"><option>Hotel or serviced apartments</option><option>Holiday homes or Airbnb</option><option>Restaurant or cafe</option><option>Salon or spa</option><option>Gym</option><option>Clinic</option><option>Corporate uniforms</option><option>Other</option></select></label>
-    <label>Weekly volume (kg or pieces)<input name="Weekly volume"></label>
-    <label>Area<input name="Area"></label>
-    <label>Contact name<input name="Contact name" required></label>
-    <label>Phone<input name="Phone" type="tel" required></label>
-    <label class="wide">What do you need cleaned?<textarea name="Items" rows="3" placeholder="Bed linen, towels, uniforms, table linen..."></textarea></label>
+    <label>{f["company"]}<input name="Company" required></label>
+    <label>{f["btype"]}<select name="Business type">{_opts(f["btypes"])}</select></label>
+    <label>{f["volume"]}<input name="Weekly volume"></label>
+    <label>{f["area"]}<input name="Area"></label>
+    <label>{f["cname"]}<input name="Contact name" required></label>
+    <label>{f["phone"]}<input name="Phone" type="tel" required dir="ltr"></label>
+    <label class="wide">{f["email"]}<input name="Email" type="email" dir="ltr"></label>
+    <label class="wide">{f["items"]}<textarea name="Items" rows="3" placeholder="{f["items_ph"]}"></textarea></label>
   </div>
-  <button class="btn btn-main" type="submit">Send quote request on WhatsApp</button>
+  <button class="btn btn-main" type="submit">{f["qsend"]}</button>
+  <p class="small form-msg" role="status" aria-live="polite"></p>
+  <p class="small">{f["privacy"]}</p>
 </form>'''
 
 

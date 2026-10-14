@@ -20,16 +20,53 @@
       bar.querySelector(".app-bar-x").addEventListener("click", function(){ bar.hidden = true; try{ sessionStorage.setItem("dimaAppBar","x"); }catch(e){} });
     }
   }
-  // forms send the request to WhatsApp with every field filled in
-  document.querySelectorAll(".js-wa-form").forEach(function(f){
+  // forms: send to /api/lead (GoHighLevel). If that is not set up or fails, fall back to WhatsApp.
+  function waFallback(f, fd){
+    var lines = [f.getAttribute("data-intro")];
+    fd.forEach(function(v, k){ if(k !== "website" && String(v).trim()) lines.push(k + ": " + v); });
+    var url = "https://wa.me/" + f.getAttribute("data-wa") + "?text=" + encodeURIComponent(lines.join("\n"));
+    window.open(url, "_blank") || (window.location.href = url);
+  }
+  document.querySelectorAll(".js-lead-form").forEach(function(f){
     f.addEventListener("submit", function(e){
       e.preventDefault();
       if(!f.reportValidity()) return;
-      var lines = [f.getAttribute("data-intro")];
-      new FormData(f).forEach(function(v, k){ if(String(v).trim()) lines.push(k + ": " + v); });
-      var url = "https://wa.me/" + f.getAttribute("data-wa") + "?text=" + encodeURIComponent(lines.join("\n"));
-      window.open(url, "_blank") || (window.location.href = url);
+      var fd = new FormData(f), data = {form: f.getAttribute("data-form"), lang: f.getAttribute("data-lang"), page: location.pathname};
+      fd.forEach(function(v, k){ data[k] = v; });
+      var btn = f.querySelector("button[type=submit]"), msg = f.querySelector(".form-msg");
+      btn.disabled = true;
+      fetch("/api/lead", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify(data)})
+        .then(function(r){ return r.json().then(function(j){ return r.ok && j.ok; }); })
+        .catch(function(){ return false; })
+        .then(function(ok){
+          btn.disabled = false;
+          if(ok){
+            f.reset();
+            msg.innerHTML = f.getAttribute("data-ok") + ' <a href="https://wa.me/' + f.getAttribute("data-wa") + '">' + f.getAttribute("data-okwa") + '</a>';
+            msg.classList.add("ok");
+            if(window.gtag) gtag("event", "generate_lead", {form: data.form});
+          } else {
+            waFallback(f, fd);
+          }
+        });
     });
+  });
+  // live Google reviews: replace the saved reviews with the latest 4 and 5 star ones when available
+  document.querySelectorAll("[data-live]").forEach(function(box){
+    var lang = box.getAttribute("data-lang") || "en";
+    fetch("/api/reviews?place=" + encodeURIComponent(box.getAttribute("data-live")) + "&lang=" + lang)
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(d){
+        if(!d || !d.enabled || !d.reviews || d.reviews.length < 2) return;
+        var esc = function(s){ var t = document.createElement("span"); t.textContent = s || ""; return t.innerHTML; };
+        var lbl = lang === "ar" ? "على جوجل" : "on Google";
+        box.innerHTML = d.reviews.slice(0, 6).map(function(v){
+          return '<figure class="rv"><div class="stars" aria-label="' + v.rating + ' out of 5 stars">' + "&#9733;".repeat(v.rating) + '</div>' +
+            '<blockquote dir="auto">' + esc(v.text.length > 420 ? v.text.slice(0, 400) + "..." : v.text) + '</blockquote>' +
+            '<figcaption>' + esc(v.author) + ', ' + esc(v.when) + ' ' + lbl + ' <a href="' + esc(v.placeUrl) + '" rel="noopener" target="_blank">' + esc(v.place) + '</a></figcaption></figure>';
+        }).join("");
+        box.classList.add("is-live");
+      }).catch(function(){});
   });
   if(reduce) return;
   // soap bubbles
