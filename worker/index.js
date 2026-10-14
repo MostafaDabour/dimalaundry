@@ -93,18 +93,24 @@ async function lead(request, env) {
 
   const name = String(data["Name"] || data["Contact name"] || "").trim();
   const [firstName, ...rest] = name.split(/\s+/);
+  const isQuote = data.form === "business-quote";
+  const lang = data.lang === "ar" ? "ar" : "en";
   const payload = {
     source: "dimalaundry.com",
     form: data.form,
     page: data.page || "",
-    language: data.lang || "en",
+    language: lang,
     first_name: firstName || "",
     last_name: rest.join(" "),
     full_name: name,
     phone: uaePhone(data.Phone),
     email: String(data.Email || "").trim(),
     company: String(data.Company || "").trim(),
-    tags: data.form === "business-quote" ? ["website lead", "commercial quote"] : ["website lead", "pickup booking"],
+    // simple fields for GHL If/Else: lead_type, language, segment (booking-en, booking-ar, quote-en, quote-ar)
+    lead_type: isQuote ? "commercial quote" : "pickup booking",
+    segment: (isQuote ? "quote-" : "booking-") + lang,
+    tags: ["website lead", isQuote ? "commercial quote" : "pickup booking", lang === "ar" ? "arabic" : "english"],
+    tags_text: ["website lead", isQuote ? "commercial quote" : "pickup booking", lang === "ar" ? "arabic" : "english"].join(", "),
     fields: data,
     submitted_at: new Date().toISOString(),
   };
