@@ -551,7 +551,7 @@ html,body{overflow-x:clip}
       e.preventDefault();
       if(!f.reportValidity()) return;
       var fd = new FormData(f), data = {form: f.getAttribute("data-form"), lang: f.getAttribute("data-lang"), page: location.pathname};
-      fd.forEach(function(v, k){ data[k] = v; });
+      fd.forEach(function(v, k){ data[k] = String(v).replace(/[\u0660-\u0669]/g, function(d){ return d.charCodeAt(0) - 0x0660; }).replace(/[\u06F0-\u06F9]/g, function(d){ return d.charCodeAt(0) - 0x06F0; }); });
       var btn = f.querySelector("button[type=submit]"), msg = f.querySelector(".form-msg");
       btn.disabled = true;
       fetch("/api/lead", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify(data)})

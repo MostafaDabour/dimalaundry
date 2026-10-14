@@ -66,11 +66,28 @@ async function reviews(request, env, ctx) {
   return res;
 }
 
+// Arabic keyboards type ٠١٢ (and Persian ۰۱۲) digits, GHL only reads 0-9, so convert them
+function latinDigits(v) {
+  return String(v || "").replace(/[\u0660-\u0669]/g, (d) => d.charCodeAt(0) - 0x0660)
+    .replace(/[\u06F0-\u06F9]/g, (d) => d.charCodeAt(0) - 0x06F0);
+}
+// UAE numbers to +971 format so GHL creates the contact: 050..., 50..., 00971..., 971...
+function uaePhone(v) {
+  let p = latinDigits(v).replace(/[^\d+]/g, "");
+  if (p.startsWith("00")) p = "+" + p.slice(2);
+  if (p.startsWith("+")) return p;
+  if (p.startsWith("971")) return "+" + p;
+  if (/^0?5\d{8}$/.test(p)) return "+971" + p.replace(/^0/, "");
+  if (/^0[2-9]\d{7}$/.test(p)) return "+971" + p.slice(1);
+  return p;
+}
+
 async function lead(request, env) {
   if (request.method !== "POST") return json({ ok: false, error: "POST only" }, 405);
   let data;
   try { data = await request.json(); } catch (e) { return json({ ok: false, error: "bad request" }, 400); }
   if (data.website) return json({ ok: true }); // honeypot filled, silently drop bots
+  for (const k of Object.keys(data)) if (typeof data[k] === "string") data[k] = latinDigits(data[k]).trim();
   const required = ["form", "Phone"];
   for (const k of required) if (!data[k]) return json({ ok: false, error: `missing ${k}` }, 400);
 
@@ -84,7 +101,7 @@ async function lead(request, env) {
     first_name: firstName || "",
     last_name: rest.join(" "),
     full_name: name,
-    phone: String(data.Phone || "").trim(),
+    phone: uaePhone(data.Phone),
     email: String(data.Email || "").trim(),
     company: String(data.Company || "").trim(),
     tags: data.form === "business-quote" ? ["website lead", "commercial quote"] : ["website lead", "pickup booking"],
