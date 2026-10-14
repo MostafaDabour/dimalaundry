@@ -1,0 +1,365 @@
+# Dima Laundry
+
+> Dima Laundry LLC is a Dubai laundry and dry cleaning company operating since 2001. It runs 8 retail branches (open 10am to 10pm daily) and 3 processing centres in Al Quoz (open 24 hours), cleans every item in-house, and offers pickup and delivery across Dubai. Prices start at AED 14 for a shirt and AED 48 for a two piece suit. Phone 800 DIMA (3462). WhatsApp +971 50 639 8093. Commercial +971 56 998 4493. Email info@dimalaundry.com.
+
+Mobile app: iOS https://apps.apple.com/ae/app/dima-laundry-dry-cleaning/id6738209489 | Android https://play.google.com/store/apps/details?id=com.cleancloudapp.dimalaundry
+
+## Key pages
+- [Services](https://www.dimalaundry.com/services)
+- [Prices](https://www.dimalaundry.com/prices)
+- [Locations](https://www.dimalaundry.com/branches)
+- [Commercial laundry](https://www.dimalaundry.com/business)
+- [FAQ](https://www.dimalaundry.com/faq)
+- [About](https://www.dimalaundry.com/about-us)
+- [Contact](https://www.dimalaundry.com/contact)
+
+## Services
+- [Dry cleaning](https://www.dimalaundry.com/services/dry-cleaning)
+- [Everyday laundry](https://www.dimalaundry.com/services/wash-and-fold)
+- [Ironing and pressing](https://www.dimalaundry.com/services/ironing)
+- [Abaya and kandura care](https://www.dimalaundry.com/services/abaya-kandura-cleaning)
+- [Evening and wedding dresses](https://www.dimalaundry.com/services/wedding-dress-cleaning)
+- [Express laundry](https://www.dimalaundry.com/services/express-laundry)
+- [Shoe cleaning](https://www.dimalaundry.com/services/shoe-cleaning)
+- [Bag cleaning](https://www.dimalaundry.com/services/bag-cleaning)
+- [Alterations](https://www.dimalaundry.com/services/alterations)
+- [Carpet cleaning](https://www.dimalaundry.com/services/carpet-cleaning)
+- [Sofa and mattress cleaning](https://www.dimalaundry.com/services/sofa-cleaning)
+- [Curtain cleaning](https://www.dimalaundry.com/services/curtain-cleaning)
+
+## Branches
+- [Dubai Marina (Marinascape)](https://www.dimalaundry.com/branches/dubai-marina): Marinascape Mall, 5 Al Tarres St, Dubai Marina, Dubai
+- [Dubai Marina (Crown)](https://www.dimalaundry.com/branches/dubai-marina-crown): 1st floor, inside Carrefour Market, King Salman Bin Abdulaziz Al Saud Street, Dubai Marina, Dubai
+- [Al Sufouh](https://www.dimalaundry.com/branches/al-sufouh): Lavender Gardens Suites, Al Sufouh 1, Dubai
+- [Jumeirah](https://www.dimalaundry.com/branches/jumeirah): Aswaaq Supermarket, 365 Al Wasl Road, Dubai
+- [Downtown Dubai](https://www.dimalaundry.com/branches/downtown-dubai): Dunya Tower, 1/2 Al Ohood Street, Business Bay, Dubai
+- [Sheikh Zayed Road](https://www.dimalaundry.com/branches/sheikh-zayed-road): Lifco, 60 Zabeel Tower, Sheikh Zayed Road, Dubai
+- [Karama](https://www.dimalaundry.com/branches/karama): Spinneys, 32 28B Street, Karama, Dubai
+- [Damac Aykon City](https://www.dimalaundry.com/branches/damac-aykon-city): Inside Fairmart, Tower C, Damac Aykon City, Dubai
+- [Processing centres](https://www.dimalaundry.com/branches/al-quoz-head-office)
+
+## Commercial
+- [Hotels](https://www.dimalaundry.com/business/hotels)
+- [Holiday homes and Airbnb](https://www.dimalaundry.com/business/holiday-homes)
+- [Restaurants and cafes](https://www.dimalaundry.com/business/restaurants)
+- [Salons, spas and gyms](https://www.dimalaundry.com/business/salons-spas-gyms)
+- [Corporate uniforms](https://www.dimalaundry.com/business/corporate-uniforms)
+- [Clinics](https://www.dimalaundry.com/business/clinics)
+
+## Guides
+- [How Much Does Laundry Cost in Dubai? 2026 Price Guide](https://www.dimalaundry.com/blog/how-much-does-laundry-cost-in-dubai): In Dubai, cleaning and pressing a shirt typically costs AED 14 to AED 20, a two piece suit AED 48 to AED 80, and an abaya or kandura AED 20 to AED 40. Pressing only starts at around AED 10 a shirt. These are Dima Laundry's published prices for October 2026, and they are the same at every branch.
+- [Holiday Home Laundry in Dubai: A Host's Guide to Linen Turnovers](https://www.dimalaundry.com/blog/holiday-home-laundry-dubai): Dubai holiday home hosts usually keep three sets of linen and towels per bed, send used sets to a commercial laundry after each checkout, and have clean sets returned folded and bagged per unit. A laundry with scheduled pickups and per unit bagging, such as Dima Laundry, keeps turnovers on time without a laundry room.
+- [How to Clean Carpets and Rugs Before Dubai's Winter Season](https://www.dimalaundry.com/blog/clean-carpets-before-winter-dubai): Dubai carpets should be professionally cleaned every 6 to 12 months because fine sand settles deep in the pile and wears the fibres. Autumn, before the cooler months when windows open and guests visit, is a good time. Professional rug cleaning at Dima Laundry starts at AED 30 per square metre.
+- [How to Clean and Store a Wedding Dress in Dubai](https://www.dimalaundry.com/blog/wedding-dress-cleaning-dubai): Clean a wedding dress within a few weeks of the wedding, before invisible sugar and sweat marks oxidise and turn yellow. Then store it flat or loosely folded in acid free tissue, away from light and humidity. At Dima Laundry wedding gowns are inspected first and priced before cleaning, and evening dresses start at AED 100.
+- [Dry Cleaning vs Washing: What Your Clothes Labels Actually Mean](https://www.dimalaundry.com/blog/dry-cleaning-vs-washing-care-labels): Care labels use five symbols: a tub for washing, a triangle for bleach, a square for drying, an iron for pressing and a circle for professional cleaning. A cross through any symbol means do not. A circle with a letter means the item should go to a professional cleaner, and "dry clean only" pieces should never go in a home washing machine.
+- [Hotel Laundry Outsourcing in Dubai: Costs and What to Ask](https://www.dimalaundry.com/blog/hotel-laundry-outsourcing-dubai): Dubai hotels outsource laundry to avoid the cost of machines, space, utilities and staff for an in-house operation. Commercial laundries usually charge per kilo or per piece based on volume, with scheduled daily collections and monthly invoicing. Before signing, check capacity, turnaround, item counting and who cleans the items.
+- [How to Clean Designer Handbags Without Damaging Them](https://www.dimalaundry.com/blog/how-to-clean-designer-handbags): Clean a designer handbag gently with a soft dry cloth after use, keep it stuffed and stored in its dust bag away from heat, and never use household wipes, alcohol or water on leather. For stains, colour wear or ink, use a professional. Handbag cleaning at Dima Laundry starts at AED 80.
+- [Abaya Care Guide: Washing, Dry Cleaning and Pressing](https://www.dimalaundry.com/blog/abaya-care-guide): Plain crepe and nida abayas can be hand washed or machine washed on a gentle cold cycle inside out, then line dried in the shade. Abayas with embroidery, beads, crystals, lace or chiffon layers should be dry cleaned. Professional abaya cleaning and pressing at Dima Laundry starts at AED 20, or AED 30 for delicate abayas.
+- [Kandura Laundry: How to Keep Kanduras White in Dubai's Heat](https://www.dimalaundry.com/blog/how-to-keep-kanduras-white): Kanduras stay white when they are washed after every wear, separately from colours, with collars and cuffs pre-treated, and dried out of direct sun. Sweat and deodorant left in the fabric oxidise and turn yellow. At Dima Laundry a cotton kandura is AED 20 to clean and press and a wool kandura AED 30.
+- [Eid Laundry Rush: How to Book Pickup in Time](https://www.dimalaundry.com/blog/eid-laundry-booking-tips): Dubai laundries are busiest in the week before Eid, when kanduras, abayas, dresses and home linen all arrive at once. Book pickup five to seven days before Eid, send traditional wear first, and confirm the ready date when you book. If you leave it late, ask about express service.
+- [Sneaker Cleaning in Dubai: What Works and What Ruins Shoes](https://www.dimalaundry.com/blog/sneaker-cleaning-dubai): Clean sneakers by hand with a soft brush, mild soap and cool water, using products made for the material, and let them air dry away from direct sun. Washing machines and hot dryers weaken glue, warp foam and crack leather. Professional sneaker cleaning at Dima Laundry is AED 100 a pair.
+- [How Often Should You Wash Bed Linen and Towels in Dubai?](https://www.dimalaundry.com/blog/how-often-to-wash-bed-linen-and-towels): In Dubai's heat, wash bed sheets and pillow cases weekly, bath towels after three or four uses, and hand towels every two or three days. Duvets and pillows need a full clean two to four times a year. At Dima Laundry a bed sheet is AED 20 to clean and press, a duvet AED 60 and a bath towel AED 10.
+
+## Arabic
+- [ديما لاندري بالعربية](https://www.dimalaundry.com/ar/)
+- [قائمة الأسعار](https://www.dimalaundry.com/ar/prices)
+- [الفروع](https://www.dimalaundry.com/ar/branches)
+
+## Policies
+- [Privacy](https://www.dimalaundry.com/privacy)
+- [Terms](https://www.dimalaundry.com/terms)
+
+# Full reference
+
+## Branches (open 10am to 10pm daily)
+### Dubai Marina (Marinascape)
+Dima Laundry Dubai Marina is inside Marinascape Mall, 5 Al Tarres St, open 10am to 10pm daily. Drop off on your way home or book a pickup from your tower in Dubai Marina, JBR, Dubai Harbour or Bluewaters.
+Address: Marinascape Mall, 5 Al Tarres St, Dubai Marina, Dubai
+Pickup areas: Dubai Marina, JBR, Dubai Harbour, Bluewaters, Emaar Beachfront, Marina Walk towers
+Google rating: 4.7 from 96 reviews (October 2026)
+
+### Dubai Marina (Crown)
+Dima Laundry's Crown branch is on the 1st floor inside Carrefour Market, King Salman Bin Abdulaziz Al Saud Street, Dubai Marina, open 10am to 10pm daily. Drop your laundry off during the weekly shop and collect it on the next one.
+Address: 1st floor, inside Carrefour Market, King Salman Bin Abdulaziz Al Saud Street, Dubai Marina, Dubai
+Pickup areas: Dubai Marina, JLT, Dubai Media City, Dubai Internet City, Barsha Heights
+
+### Al Sufouh
+Dima Laundry Al Sufouh is at Lavender Gardens Suites, Al Sufouh 1, open 10am to 10pm daily. It is rated 4.8 from 139 Google reviews and serves homes and offices across Al Sufouh, Knowledge Park, Media City, Internet City and Palm Jumeirah.
+Address: Lavender Gardens Suites, Al Sufouh 1, Dubai
+Pickup areas: Al Sufouh 1 and 2, Knowledge Park, Dubai Media City, Dubai Internet City, Palm Jumeirah
+Google rating: 4.8 from 139 reviews (October 2026)
+
+### Jumeirah
+Dima Laundry Jumeirah is inside Aswaaq Supermarket, 365 Al Wasl Road, open 10am to 10pm daily. Families across Jumeirah, Al Wasl, Umm Suqeim and City Walk use it for abayas, kanduras, delicate clothes, curtains and household linen.
+Address: Aswaaq Supermarket, 365 Al Wasl Road, Dubai
+Pickup areas: Jumeirah 1, 2 and 3, Al Wasl, Umm Suqeim, Al Safa, City Walk, La Mer
+Google rating: 4.7 from 129 reviews (October 2026)
+
+### Downtown Dubai
+Dima Laundry Downtown is at Dunya Tower, 1/2 Al Ohood Street, Business Bay, open 10am to 10pm daily. It looks after suits, shirts and premium garments for professionals across Downtown Dubai, Business Bay and DIFC, with pickup from towers and offices.
+Address: Dunya Tower, 1/2 Al Ohood Street, Business Bay, Dubai
+Pickup areas: Downtown Dubai, Business Bay, DIFC, Za'abeel, Dubai Design District
+Google rating: 4.4 from 98 reviews (October 2026)
+
+### Sheikh Zayed Road
+Dima Laundry Sheikh Zayed Road is inside Lifco, 60 Zabeel Tower, open 10am to 10pm daily. It serves residents and offices along Sheikh Zayed Road, the World Trade Centre area, Za'abeel and Satwa.
+Address: Lifco, 60 Zabeel Tower, Sheikh Zayed Road, Dubai
+Pickup areas: Sheikh Zayed Road towers, Trade Centre, Za'abeel, Satwa, Al Jafiliya
+Google rating: 4.8 from 87 reviews (October 2026)
+
+### Karama
+Dima Laundry Karama is inside Spinneys, 32 28B Street, open 10am to 10pm daily. It serves Karama, Mankhool, Oud Metha and Bur Dubai with everyday laundry, pressing and care for traditional wear, from kanduras to sarees and salwar suits.
+Address: Spinneys, 32 28B Street, Karama, Dubai
+Pickup areas: Karama, Al Mankhool, Oud Metha, Bur Dubai, Umm Hurair
+Google rating: 4.8 from 182 reviews (October 2026)
+
+### Damac Aykon City
+Dima Laundry Damac Aykon City is inside Fairmart, Tower C, open 10am to 10pm daily. Residents can drop off without leaving the building, and neighbours in Business Bay and Al Wasl can book pickup and delivery.
+Address: Inside Fairmart, Tower C, Damac Aykon City, Dubai
+Pickup areas: Damac Aykon City, Business Bay, Al Wasl, Al Safa, Za'abeel
+
+## Processing centres
+- Al Quoz 3 (Head Office): 22, 24a Street, Al Quoz Industrial Area 3, Dubai. Open 24 hours. Management and commercial accounts.
+- Al Quoz 4: 17a, 4 Street, Al Quoz Industrial Area 4, Dubai. Open 24 hours. Rated 4.6 from 225 Google reviews.
+- Al Quoz Facility 3: 23 22nd St, Al Quoz Industrial Area 3, Dubai. Open 24 hours. Linen, towels, uniforms, carpets and guest laundry.
+- DIP-2: Dubai Investments Park 2, Dubai. Opening soon.
+
+## Services
+### Dry cleaning
+Dima Laundry dry cleans suits, dresses, coats and delicate fabrics in its own Al Quoz centres, from AED 14 a shirt and AED 48 a two piece suit, with pickup and delivery across Dubai and 8 branches to drop off at.
+Q: How much does dry cleaning cost in Dubai?
+A: At Dima Laundry, dry cleaning and pressing costs AED 14 for a shirt, AED 15 for trousers, AED 48 for a two piece suit and AED 40 for a long dress. Premium service costs more and gives each piece extra care.
+Q: Does dry cleaning remove stains?
+A: Dima Laundry treats stains before cleaning. Fresh stains have the best chance of full removal, so bring stained items in as soon as you can and point the stain out at drop off.
+Q: Will dry cleaning shrink my suit?
+A: No. Dry cleaning uses no water, so wool and tailored garments keep their shape.
+Q: Can I get same day dry cleaning?
+A: Express service is available. Ask on WhatsApp or at the counter for today's cut-off time.
+
+### Everyday laundry
+Dima Laundry washes, presses and folds everyday clothes and home linen for Dubai households, priced per item: T-shirts from AED 14, bed sheets AED 20 and bath towels AED 10, with pickup and delivery or drop off at any of 8 branches.
+Q: How much is laundry in Dubai?
+A: Dima Laundry prices everyday laundry per item: a T-shirt is AED 14, trousers AED 15, a bed sheet AED 20 and a bath towel AED 10, cleaned and pressed.
+Q: Do I need to sort my laundry?
+A: No. Dima Laundry sorts every order by colour and fabric.
+Q: Can I book a weekly laundry pickup?
+A: Yes. Choose a fixed day and time and Dima Laundry collects every week.
+
+### Ironing and pressing
+Dima Laundry presses clean clothes from AED 9.80 a shirt, AED 10.50 for trousers and AED 14 for a kandura or abaya, with pickup and delivery across Dubai and 8 branches to drop off at.
+Q: How much is ironing in Dubai?
+A: Dima Laundry presses a shirt for AED 9.80, trousers for AED 10.50 and a kandura for AED 14. Pressing prices are for clothes that are already clean.
+Q: Can I send clean clothes just for ironing?
+A: Yes. Pressing only is priced per item at every Dima Laundry branch.
+Q: Do you starch shirts?
+A: Yes, on request.
+
+### Abaya and kandura care
+Dima Laundry cleans and presses abayas and kanduras from AED 20, ghutras from AED 12 and delicate abayas from AED 30, protecting embroidery and crystals and finishing kanduras with a sharp press.
+Q: How much does abaya cleaning cost in Dubai?
+A: At Dima Laundry an abaya costs AED 20 to clean and press, or AED 30 for a delicate or embellished abaya. Premium service is AED 30 and AED 40.
+Q: Should an abaya be washed or dry cleaned?
+A: Plain crepe and nida abayas can be gently washed. Abayas with embroidery, beads, crystals, lace or chiffon layers should be dry cleaned. Dima Laundry checks each one at intake and chooses the safe method.
+Q: How much is kandura laundry?
+A: A cotton kandura is AED 20 to clean and press, a wool kandura AED 30, and pressing only is AED 14.
+
+### Evening and wedding dresses
+Dima Laundry cleans evening and party dresses from AED 100, and heavily embellished dresses from AED 200. Wedding gowns are inspected first and priced before any cleaning starts.
+Q: How much is wedding dress cleaning in Dubai?
+A: Dima Laundry inspects wedding gowns first and confirms the price before cleaning. Evening and party dresses start at AED 100, and heavily embellished dresses at AED 200.
+Q: When should I clean my wedding dress?
+A: As soon as you can after the wedding. Sugar and sweat marks are invisible at first and turn yellow over time.
+
+### Express laundry
+Dima Laundry offers express laundry, pressing and dry cleaning across Dubai for the days you need clothes back fast. Message the team on WhatsApp or ask at any of 8 branches for today's cut-off time.
+Q: Does Dima Laundry offer same day laundry?
+A: Dima Laundry offers express service. Message the team on WhatsApp or ask at the counter for today's cut-off time and price.
+Q: Can I get a suit cleaned for tomorrow morning?
+A: Usually yes. Book express as early in the day as you can and confirm the ready time with the team.
+
+### Shoe cleaning
+Dima Laundry hand cleans sneakers, sports shoes and formal shoes from AED 100 a pair, leather shoes and boots from AED 120, and children's shoes from AED 60.
+Q: How much is shoe cleaning in Dubai?
+A: At Dima Laundry, sneakers and formal shoes cost AED 100 a pair, leather shoes and boots AED 120, and slippers AED 80. Children's shoes start at AED 60.
+Q: Do you clean designer sneakers?
+A: Yes. Premium service is available for designer and luxury pairs.
+
+### Bag cleaning
+Dima Laundry cleans and restores handbags from AED 80, leather bags from AED 100, and suitcases and oversized bags from AED 150, by hand in its own Al Quoz centres.
+Q: How much is handbag cleaning in Dubai?
+A: Dima Laundry cleans a small handbag or purse for AED 80, a big or oversized handbag for AED 150, and a leather bag from AED 100.
+Q: Do you clean suitcases?
+A: Yes. Suitcases are AED 150 and trolley bags AED 100.
+
+### Alterations
+Dima Laundry handles minor alterations from AED 40 and fitting alterations from AED 60. Drop items at any of 8 branches or add them to a laundry pickup.
+Q: How much are alterations in Dubai?
+A: Dima Laundry charges AED 40 for minor alterations and AED 60 for fitting alterations.
+Q: Do I need a fitting?
+A: For hems, pin the length you want. For resizing, a fitting at the branch gives the best result.
+
+### Carpet cleaning
+Dima Laundry cleans carpets and rugs from AED 30 per square metre, handmade and wool rugs from AED 40 and leather rugs from AED 50, at its Al Quoz centres with pickup and delivery across Dubai.
+Q: How much is carpet cleaning in Dubai?
+A: Dima Laundry cleans carpets from AED 30 per square metre. Handmade and wool rugs are AED 40, leather AED 50.
+Q: How often should carpets be cleaned in Dubai?
+A: Every 6 to 12 months. Sand and dust settle deep in the fibres, so homes with children, pets or open balconies benefit from more frequent cleaning.
+
+### Sofa and mattress cleaning
+Dima Laundry shampoos sofas at your home for AED 70 per seat, cleans mattresses on site from AED 200, and washes removable sofa covers from AED 30.
+Q: How much is sofa cleaning in Dubai?
+A: Dima Laundry shampoos sofas on site for AED 70 per seat. Removable covers are AED 30 to AED 50 depending on size.
+Q: How much is mattress cleaning?
+A: On-site mattress cleaning is AED 200 for a single, AED 250 for a queen and AED 300 for a king.
+
+### Curtain cleaning
+Dima Laundry cleans curtains priced per square metre: chiffon from AED 12, standard from AED 15 and blackout from AED 20, with a lower rate when cleaned on site at your home.
+Q: How much is curtain cleaning in Dubai?
+A: Dima Laundry cleans curtains per square metre: chiffon AED 12, standard AED 15 and blackout AED 20 at the centre, or AED 8, AED 12 and AED 15 on site.
+Q: How often should curtains be cleaned in Dubai?
+A: Every 6 to 12 months, because of dust and humidity.
+
+## Commercial laundry
+### Hotels
+Dima Laundry handles outsourced linen, towels, guest laundry and uniform cleaning for Dubai hotels and serviced apartments, with scheduled collections and processing in its own Al Quoz centres that run 24 hours.
+Q: How is hotel laundry priced?
+A: Dima Laundry quotes hotel laundry per kg or per piece, based on volume and service level.
+Q: Can you handle guest laundry?
+A: Yes. Dima Laundry collects guest laundry and dry cleaning with your linen and uniforms.
+
+### Holiday homes and Airbnb
+Dima Laundry handles linen and towel laundry for Dubai Airbnb hosts and holiday home operators, collecting from your units and returning everything folded and bagged per unit, ready for the next check-in.
+Q: How is holiday home laundry priced?
+A: Dima Laundry quotes per set or per kg, based on the number of units and turnovers.
+Q: Do you work with cleaning companies?
+A: Yes. Dima Laundry can collect from and deliver to your cleaning team.
+
+### Restaurants and cafes
+Dima Laundry cleans chef whites, aprons, tablecloths, napkins and kitchen towels for Dubai restaurants, cafes and caterers, with grease and food stains treated before washing.
+Q: Can you remove kitchen grease stains?
+A: Dima Laundry pre-treats grease and food stains on every item before washing.
+
+### Salons, spas and gyms
+Dima Laundry washes towels, robes, gowns and treatment linen for Dubai salons, spas, gyms and studios on fixed collections, with product and oil stains treated first.
+Q: Can you remove hair dye from salon towels?
+A: Dima Laundry pre-treats dye stains. Heavy dye may leave light marks, which is why many salons use dark towels for colour work.
+
+### Corporate uniforms
+Dima Laundry cleans and presses staff uniforms for Dubai companies in retail, hospitality, security, aviation and offices, tagged per employee and returned on a fixed schedule.
+Q: Do you collect from staff accommodation?
+A: Yes. Dima Laundry can collect from your site or from staff accommodation.
+
+### Clinics
+Dima Laundry cleans scrubs, lab coats, patient gowns, couch covers and towels for Dubai clinics, dental practices and aesthetic centres on scheduled collections.
+Q: What clinic linen do you handle?
+A: Dima Laundry handles everyday clinic linen and staff wear. Talk to the commercial team about any infection control requirements before you start.
+
+## Prices (AED, standard service, cleaned and pressed; updated 12 October 2026)
+### Men: Laundry and Dry Cleaning
+- Shirt: 14 (pressing only 9.80, premium 20)
+- T-Shirt: 14 (pressing only 9.80, premium 20)
+- Suit Jacket: 33 (pressing only 23.10, premium 50)
+- Jacket, leather: 100 (pressing only 70, premium 150)
+- Suit (2 pcs): 48 (pressing only 33.60, premium 80)
+- Suit (3 pcs): 60 (pressing only 42, premium 100)
+- Leather Top: 80 (pressing only 56, premium 100)
+- Waist Coat: 20 (pressing only 14, premium 25)
+- Trouser: 15 (pressing only 10.50, premium 30)
+- Trouser, leather (from): 80 (pressing only 56, premium 120)
+- Short: 12 (pressing only 8.40, premium 25)
+- Tracksuit (2 pcs): 30 (pressing only 21, premium 60)
+- Track Top: 20 (pressing only 14, premium 30)
+- Track Bottom: 20 (pressing only 14, premium 30)
+- Pyjama suit (2 pcs): 20 (pressing only 14, premium 35)
+- Pyjama top: 12 (pressing only 8.40, premium 20)
+- Pyjama bottom: 10 (pressing only 7, premium 15)
+- Slacks: 12 (pressing only 8.40, premium 20)
+### Men: Traditional Wear
+- Kandura: 20 (pressing only 14, premium 30)
+- Kandura, wool: 30 (pressing only 21, premium 40)
+- Ghutra: 12 (pressing only 8.40, premium 20)
+- Ghutra, wool: 15 (pressing only 10.50, premium 25)
+- Dhoti / lungi: 12 (pressing only 8.40, premium 20)
+- Kurtha: 15 (pressing only 10.50, premium 30)
+- Salwar: 15 (pressing only 10.50, premium 20)
+- Salwar suit (2 pcs): 30 (pressing only 21, premium 40)
+- Salwar suit (3 pcs): 40 (pressing only 28, premium 50)
+### Men: Winter Items
+- Sweater: 35 (pressing only 24.50, premium 45)
+- Pullover: 35 (pressing only 24.50, premium 45)
+- Hoodie: 35 (pressing only 24.50, premium 45)
+- Jacket: 50 (pressing only 35, premium 80)
+- Overcoat: 60 (pressing only 42, premium 80)
+- Overcoat, long: 100 (pressing only 70, premium 120)
+### Women: Laundry and Dry Cleaning
+- Shirt: 14 (pressing only 9.80, premium 20)
+- T-Shirt: 14 (pressing only 9.80, premium 20)
+- Suit Jacket: 33 (pressing only 23.10, premium 40)
+- Jacket, leather: 100 (pressing only 70, premium 150)
+- Suit (2 pcs): 48 (pressing only 33.60, premium 60)
+- Suit (3 pcs): 60 (pressing only 42, premium 80)
+- Leather Top: 80 (pressing only 56, premium 100)
+- Sheila / scarf: 12 (pressing only 8.40, premium 18)
+- Sheila / scarf, wool: 18 (pressing only 12.60, premium 20)
+- Waist Coat: 20 (pressing only 14, premium 25)
+- Trouser: 15 (pressing only 10.50, premium 20)
+- Trouser, leather (from): 80 (pressing only 56, premium 100)
+- Short: 12 (pressing only 8.40, premium 15)
+- Tracksuit (2 pcs): 30 (pressing only 21, premium 40)
+- Track Top: 20 (pressing only 14, premium 30)
+- Track Bottom: 20 (pressing only 14, premium 30)
+- Pyjama suit (2 pcs): 20 (pressing only 14, premium 35)
+- Pyjama top: 12 (pressing only 8.40, premium 18)
+- Pyjama bottom: 10 (pressing only 7, premium 12)
+- Slacks: 10 (pressing only 7, premium 15)
+- Frock: 12 (pressing only 8.40, premium 18)
+- Dress, leather: 120 (pressing only 84, premium 150)
+- Skirt: 15 (pressing only 10.50, premium 20)
+- Skirt, pleated: 25 (pressing only 17.50, premium 40)
+- Leather Skirt: 80 (pressing only 56, premium 120)
+- Dress, short: 30 (pressing only 21, premium 35)
+- Dress, long: 40 (pressing only 28, premium 45)
+- Party / evening dress: 100 (pressing only 70, premium 130)
+- Party / evening dress, heavy: 200 (pressing only 140, premium 300)
+### Women: Traditional Wear
+- Abaya: 20 (pressing only 14, premium 30)
+- Abaya, delicate: 30 (pressing only 21, premium 40)
+- Jalabiya: 20 (pressing only 14, premium 30)
+- Jalabiya, delicate: 30 (pressing only 21, premium 40)
+- Saree: 40 (pressing only 28, premium 50)
+- Kurtha: 15 (pressing only 10.50, premium 20)
+- Salwar: 15 (pressing only 10.50, premium 20)
+- Salwar suit (2 pcs): 30 (pressing only 21, premium 40)
+- Salwar suit (3 pcs): 40 (pressing only 28, premium 50)
+### Women: Winter Items
+- Sweater: 35 (pressing only 24.50, premium 45)
+- Pullover: 35 (pressing only 24.50, premium 45)
+- Hoodie: 35 (pressing only 24.50, premium 45)
+- Jacket: 50 (pressing only 35, premium 80)
+- Overcoat: 60 (pressing only 42, premium 80)
+- Overcoat, long: 100 (pressing only 70, premium 120)
+### Home fabrics
+- Curtain, blackout (per sq m): 20 at the centre, 15 on site
+- Curtain, standard (per sq m): 15 at the centre, 12 on site
+- Curtain, chiffon (per sq m): 12 at the centre, 8 on site
+- Carpet (per sq m): 30 at the centre, n/a on site
+- Carpet, handmade (per sq m): 40 at the centre, n/a on site
+- Carpet, leather (per sq m): 50 at the centre, n/a on site
+- Carpet, wool (per sq m): 40 at the centre, n/a on site
+- Chair Cover: 20 at the centre, 15 on site
+- Frill: 50 at the centre, 25 on site
+### Shoes and bags
+- Formal Shoes: 100 standard, 150 premium
+- Boot: 120 standard, 180 premium
+- Slippers / sandals: 80 standard, 120 premium
+- Leather Shoe: 120 standard, 150 premium
+- Sports shoes: 100 standard, 150 premium
+- Sneakers: 100 standard, 150 premium
+- Handbag, small / purse: 80 standard, 120 premium
+- Handbag, big / oversized: 150 standard, 200 premium
+- Suitcase: 150 standard, 200 premium
+- Backpack: 100 standard, 150 premium
+- Leather bag, small: 100 standard, 150 premium
+- Leather bag, big: 150 standard, 200 premium
+- Trolley Bag: 100 standard, 150 premium
+- Briefcase: 120 standard, 180 premium

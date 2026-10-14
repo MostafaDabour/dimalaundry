@@ -404,6 +404,24 @@ Mobile app: iOS {C.APP_IOS} | Android {C.APP_ANDROID}
     llms += f"\n## Arabic\n- [ديما لاندري بالعربية]({B.DOMAIN}/ar/)\n- [قائمة الأسعار]({B.DOMAIN}/ar/prices)\n- [الفروع]({B.DOMAIN}/ar/branches)\n"
     llms += f"\n## Policies\n- [Privacy]({B.DOMAIN}/privacy)\n- [Terms]({B.DOMAIN}/terms)\n"
     open(os.path.join(B.ROOT, "llms.txt"), "w").write(llms)
+    # llms-full.txt: every fact, price headline, branch and FAQ in one plain file for AI crawlers
+    full = llms + "\n# Full reference\n\n## Branches (open " + C.RETAIL_HOURS + ")\n"
+    for b in C.BRANCHES:
+        full += f"### {b['name']}\n{b['intro']}\nAddress: {b['address']}\nPickup areas: {', '.join(b['areas'])}\n" + (f"Google rating: {b['rating'][0]} from {b['rating'][1]} reviews (October 2026)\n" if b.get('rating') else "") + "\n"
+    full += "## Processing centres\n" + "".join(f"- {n}: {a}. {r}\n" for n, a, r in C.PROCESSING)
+    full += "\n## Services\n"
+    for s in C.SERVICES:
+        full += f"### {s['short']}\n{s['sub']}\n" + "".join(f"Q: {q}\nA: {a}\n" for q, a in s['faqs']) + "\n"
+    full += "## Commercial laundry\n"
+    for x in C.BUSINESS:
+        full += f"### {x['short']}\n{x['sub']}\n" + "".join(f"Q: {q}\nA: {a}\n" for q, a in x['faqs']) + "\n"
+    full += "## Prices (AED, standard service, cleaned and pressed; updated 12 October 2026)\n"
+    for key in ["men", "women"]:
+        for sec, rows in P[key].items():
+            full += f"### {key.title()}: {sec}\n" + "".join(f"- {B.nm(r[0])}: {B.money(r[1])} (pressing only {B.money(r[2])}, premium {B.money(r[3])})\n" for r in rows)
+    full += "### Home fabrics\n" + "".join(f"- {B.nm(r[0])}: {B.money(r[1])} at the centre, {B.money(r[2])} on site\n" for r in P["home_fabrics"])
+    full += "### Shoes and bags\n" + "".join(f"- {B.nm(r[0])}: {B.money(r[1])} standard, {B.money(r[2])} premium\n" for r in P["shoes"] + P["bags"])
+    open(os.path.join(B.ROOT, "llms-full.txt"), "w").write(full)
     redirects = """/about-us/   /about-us   301
 /dimasobha/   /branches   301
 /dimasobha   /branches   301

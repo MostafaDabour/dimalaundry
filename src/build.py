@@ -103,11 +103,12 @@ def ld(o):
 
 ORG = {
     "@context": "https://schema.org", "@type": "Organization", "@id": DOMAIN + "/#org", "name": "Dima Laundry",
-    "legalName": "Dima Laundry LLC", "url": DOMAIN + "/", "logo": DOMAIN + "/logo.png", "foundingDate": "2001",
+    "legalName": "Dima Laundry LLC", "alternateName": ["ديما لاندري", "Dima Dry Cleaning", "DIMA Laundry"], "url": DOMAIN + "/", "logo": DOMAIN + "/logo.png", "foundingDate": "2001",
     "email": C.EMAIL,
     "description": "Dubai laundry and dry cleaning company operating since 2001, with 8 retail branches, 3 processing centres in Al Quoz, pickup and delivery, and commercial laundry for hotels and businesses.",
     "address": {"@type": "PostalAddress", "streetAddress": C.HQ_ADDRESS, "addressLocality": "Dubai", "addressCountry": "AE"},
     "areaServed": {"@type": "City", "name": "Dubai"},
+    "knowsAbout": ["Laundry", "Dry cleaning", "Ironing", "Abaya cleaning", "Kandura laundry", "Wedding dress cleaning", "Shoe cleaning", "Handbag cleaning", "Carpet cleaning", "Curtain cleaning", "Sofa shampooing", "Commercial laundry", "Hotel linen laundry"],
     "contactPoint": [
         {"@type": "ContactPoint", "telephone": "+971-800-3462", "contactType": "customer service", "availableLanguage": ["English", "Arabic"]},
         {"@type": "ContactPoint", "telephone": "+971-56-998-4493", "contactType": "sales", "description": "Commercial laundry enquiries"},
