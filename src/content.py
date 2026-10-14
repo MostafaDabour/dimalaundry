@@ -15,6 +15,12 @@ APP_IOS = "https://apps.apple.com/ae/app/dima-laundry-dry-cleaning/id6738209489"
 APP_ANDROID = "https://play.google.com/store/apps/details?id=com.cleancloudapp.dimalaundry"
 BRANCH_COUNT = 8
 
+# ---------- tracking (leave empty until you have the IDs) ----------
+GA4_ID = ""               # e.g. "G-XXXXXXXXXX"
+GOOGLE_ADS_ID = ""        # e.g. "AW-123456789"
+ADS_LABEL_BOOKING = ""    # conversion label for pickup bookings, e.g. "AbCdEfGhIj"
+ADS_LABEL_QUOTE = ""      # conversion label for commercial quotes
+
 # ---------- Google profiles and reviews ----------
 GMAPS = {
     "q4": "https://www.google.com/maps/place/?q=place_id:ChIJXcqBG0VrXz4RUiFV4V1j264",

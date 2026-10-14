@@ -359,8 +359,8 @@ def build_all(B):
                           [B.ORG, cs, B.faq_schema(qas)]))
 
     # ================= THANKS / 404 =================
-    B.write("/thanks", B.shell("/thanks", "Thank you | Dima Laundry", "Your request was sent to Dima Laundry.",
-                                '<section class="page-hero"><div class="wrap"><h1>Request sent</h1><div class="answer tag-card"><span class="tag-hole" aria-hidden="true"></span><p>The Dima team will confirm your pickup time on WhatsApp.</p></div></div></section>', [B.ORG], noindex=True), sitemap=False)
+    from thankyou import build_thankyou
+    build_thankyou(B)
     nf = B.shell("/404", "Page not found | Dima Laundry", "This page does not exist.",
                  f'<section class="page-hero"><div class="bubbles" data-count="7" aria-hidden="true"></div><div class="wrap"><h1>This page has gone missing</h1><div class="answer tag-card"><span class="tag-hole" aria-hidden="true"></span><p>Like a sock in the wash. Try our services, prices or locations, or call {C.TOLL}.</p></div><div class="hero-actions"><a class="btn btn-main" href="/services">Services</a><a class="btn btn-line" href="/branches">Locations</a></div></div></section>', [B.ORG], noindex=True)
     open(os.path.join(B.ROOT, "404.html"), "w", encoding="utf-8").write(nf)
@@ -426,6 +426,7 @@ Mobile app: iOS {C.APP_IOS} | Android {C.APP_ANDROID}
 /dimasobha   /branches   301
 /contact-us/   /contact   301
 /contact-us   /contact   301
+/thanks   /thank-you   301
 /branches/trade-centre   /branches/sheikh-zayed-road   301
 /branches/jvc   /branches   301
 /branches/umm-suqeim   /branches/jumeirah   301

@@ -41,10 +41,9 @@
         .then(function(ok){
           btn.disabled = false;
           if(ok){
-            f.reset();
-            msg.innerHTML = f.getAttribute("data-ok") + ' <a href="https://wa.me/' + f.getAttribute("data-wa") + '">' + f.getAttribute("data-okwa") + '</a>';
-            msg.classList.add("ok");
-            if(window.gtag) gtag("event", "generate_lead", {form: data.form});
+            var lid = Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+            var base = (data.lang === "ar" ? "/ar" : "") + (data.form === "business-quote" ? "/thank-you-quote" : "/thank-you");
+            window.location.href = base + "?lid=" + lid;
           } else {
             waFallback(f, fd);
           }
@@ -68,6 +67,24 @@
         box.classList.add("is-live");
       }).catch(function(){});
   });
+  // thank-you pages: count each lead once for Google Ads and GA4
+  var conv = document.getElementById("conv");
+  if(conv){
+    var lid = new URLSearchParams(location.search).get("lid"), seen = false;
+    try{ seen = !lid || sessionStorage.getItem("dimaLead_" + lid) === "1"; }catch(e){}
+    if(!seen){
+      try{ sessionStorage.setItem("dimaLead_" + lid, "1"); }catch(e){}
+      var kind = conv.getAttribute("data-kind");
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({event: "generate_lead", lead_type: kind, lead_id: lid});
+      if(window.gtag){
+        gtag("event", "generate_lead", {lead_type: kind});
+        var label = conv.getAttribute("data-label");
+        if(window.DIMA_ADS && label) gtag("event", "conversion", {send_to: window.DIMA_ADS + "/" + label, transaction_id: lid});
+      }
+    }
+    if(lid && history.replaceState) history.replaceState(null, "", location.pathname);
+  }
   if(reduce) return;
   // soap bubbles
   document.querySelectorAll(".bubbles").forEach(function(box){

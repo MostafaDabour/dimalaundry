@@ -261,13 +261,28 @@ def footer(lang="en"):
 AR_PATHS = set()  # English paths that have an Arabic version
 
 
+def tracking_head():
+    ids = [i for i in (C.GA4_ID, C.GOOGLE_ADS_ID) if i]
+    if not ids:
+        return "<script>window.dataLayer=window.dataLayer||[];</script>"
+    cfg = "".join(f"gtag('config','{i}');" for i in ids)
+    return (f'<script async src="https://www.googletagmanager.com/gtag/js?id={ids[0]}"></script>'
+            f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());{cfg}"
+            f"window.DIMA_ADS='{C.GOOGLE_ADS_ID}';</script>")
+
+
 def shell(path, title, desc, body, schemas, noindex=False, lang="en", alt=None):
     canon = DOMAIN + path
     t = esc(title)
     d = esc(desc)
     robots = '<meta name="robots" content="noindex">' if noindex else ""
     hreflang = ""
-    if alt is None:
+    if alt is False:
+        alt = None
+        hreflang_off = True
+    else:
+        hreflang_off = False
+    if alt is None and not hreflang_off:
         if lang == "en" and path in AR_PATHS:
             alt = "/ar" + (path if path != "/" else "/")
         elif lang == "ar":
@@ -301,6 +316,7 @@ def shell(path, title, desc, body, schemas, noindex=False, lang="en", alt=None):
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#8C267D">
 {font}
+{tracking_head()}
 <style>{CSS}</style>
 {"".join(ld(s) for s in schemas)}
 </head>
