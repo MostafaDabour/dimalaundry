@@ -422,8 +422,7 @@ Mobile app: iOS {C.APP_IOS} | Android {C.APP_ANDROID}
     full += "### Home fabrics\n" + "".join(f"- {B.nm(r[0])}: {B.money(r[1])} at the centre, {B.money(r[2])} on site\n" for r in P["home_fabrics"])
     full += "### Shoes and bags\n" + "".join(f"- {B.nm(r[0])}: {B.money(r[1])} standard, {B.money(r[2])} premium\n" for r in P["shoes"] + P["bags"])
     open(os.path.join(B.ROOT, "llms-full.txt"), "w").write(full)
-    redirects = """/about-us/   /about-us   301
-/dimasobha/   /branches   301
+    redirects = """/dimasobha/   /branches   301
 /dimasobha   /branches   301
 /contact-us/   /contact   301
 /contact-us   /contact   301
