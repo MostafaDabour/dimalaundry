@@ -3,6 +3,7 @@
 //
 // Secrets (Cloudflare > dimalaundry > Settings > Variables and Secrets):
 //   GHL_WEBHOOK_URL        GoHighLevel inbound webhook URL (workflow trigger "Inbound Webhook")
+//   GHL_QUOTE_WEBHOOK_URL  optional: separate webhook for commercial quote requests
 //   GOOGLE_PLACES_API_KEY  Google Places API (New) key, restricted to the Places API
 // Optional:
 //   LEAD_FORWARD_URL       a second webhook (Make, Zapier, Formspree) if you want leads copied elsewhere
@@ -91,7 +92,9 @@ async function lead(request, env) {
     submitted_at: new Date().toISOString(),
   };
 
-  const targets = [env.GHL_WEBHOOK_URL, env.LEAD_FORWARD_URL].filter(Boolean);
+  // commercial quotes can go to their own GHL workflow; otherwise everything uses the main webhook
+  const ghl = data.form === "business-quote" && env.GHL_QUOTE_WEBHOOK_URL ? env.GHL_QUOTE_WEBHOOK_URL : env.GHL_WEBHOOK_URL;
+  const targets = [ghl, env.LEAD_FORWARD_URL].filter(Boolean);
   if (!targets.length) return json({ ok: false, error: "not configured" }, 503);
   const sends = await Promise.all(targets.map((t) =>
     fetch(t, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) })
