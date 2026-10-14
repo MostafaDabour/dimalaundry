@@ -242,7 +242,7 @@ def footer(lang="en"):
     {col(u["locations"], loc)}
     {col(u["commercial"], biz)}
   </div>
-  <div class="wrap foot-base"><span>{u["foot_base"]}</span><span><a href="{b}/prices">{u["prices"]}</a> <a href="{b}/faq">{u["faq"]}</a> <a href="/blog">{UI["en"]["blog"]}</a> <a href="{b}/contact">{u["contact"]}</a> <a href="{b}/privacy">{u["privacy"]}</a> <a href="{b}/terms">{u["terms"]}</a> <a href="/best-laundry-services-dubai">{UI["en"]["compare"]}</a></span></div>
+  <div class="wrap foot-base"><span>{u["foot_base"]}</span><span><a href="{b}/prices">{u["prices"]}</a> <a href="{b}/faq">{u["faq"]}</a> <a href="/blog">{u["blog"] + (" (English)" if lang == "ar" else "")}</a> <a href="{b}/contact">{u["contact"]}</a> <a href="{b}/privacy">{u["privacy"]}</a> <a href="{b}/terms">{u["terms"]}</a> <a href="/best-laundry-services-dubai">{u["compare"] + (" (English)" if lang == "ar" else "")}</a></span></div>
 </footer>
 <div class="mobile-bar"><a href="tel:{C.TEL}">{u["call"]}</a><a href="{wa_link()}">{u["wa"]}</a><a href="{b}/contact#book" class="mb-book">{u["book_short"]}</a></div>
 <a class="wa-float" href="{wa_link()}" aria-label="{u["chat"]}">{WA_ICON}<span class="wa-label">{u["chat"]}</span></a>'''
