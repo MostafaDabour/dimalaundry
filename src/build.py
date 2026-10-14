@@ -134,7 +134,7 @@ UI = {
         "skip": "Skip to content", "app_bar": "Get the Dima Laundry app", "open": "Open", "close": "Close",
         "foot_intro": f"Laundry and dry cleaning in Dubai since 2001. Dima Laundry LLC, {C.HQ_ADDRESS}, Dubai.",
         "toll": "Toll free", "wa": "WhatsApp", "biz": "Commercial", "foot_base": "Dima Laundry LLC. Serving Dubai since 2001.",
-        "faq": "FAQ", "contact": "Contact", "compare": "Compare Dubai laundries", "blog": "Laundry guides", "privacy": "Privacy", "terms": "Terms",
+        "faq": "FAQ", "contact": "Contact", "compare": "Compare Dubai laundries", "blog": "Blog", "privacy": "Privacy", "terms": "Terms",
         "call": "Call", "book_short": "Book Pickup", "chat": "Chat on WhatsApp", "proc": "Processing centres",
         "dl_on": "Download on the", "get_on": "Get it on", "lang_switch": "العربية", "updated": "Last updated October 2026.",
         "wa_book_text": "Hi Dima Laundry, I would like to book a pickup.", "wa_quote_text": "Hi Dima Laundry, I would like a commercial laundry quote.",
@@ -145,7 +145,7 @@ UI = {
         "skip": "انتقل إلى المحتوى", "app_bar": "حمّل تطبيق ديما لاندري", "open": "فتح", "close": "إغلاق",
         "foot_intro": "مغسلة وتنظيف جاف في دبي منذ 2001. ديما لاندري ذ.م.م، شارع 24a رقم 22، القوز الصناعية 3، دبي.",
         "toll": "الرقم المجاني", "wa": "واتساب", "biz": "الشركات", "foot_base": "ديما لاندري ذ.م.م. في خدمة دبي منذ 2001.",
-        "faq": "الأسئلة الشائعة", "contact": "تواصل معنا", "compare": "مقارنة مغاسل دبي", "blog": "أدلة العناية بالملابس", "privacy": "الخصوصية", "terms": "الشروط",
+        "faq": "الأسئلة الشائعة", "contact": "تواصل معنا", "compare": "مقارنة مغاسل دبي", "blog": "المدونة", "privacy": "الخصوصية", "terms": "الشروط",
         "call": "اتصل", "book_short": "احجز", "chat": "تحدث معنا واتساب", "proc": "مراكز التنظيف",
         "dl_on": "حمّله من", "get_on": "احصل عليه من", "lang_switch": "English", "updated": "آخر تحديث: أكتوبر 2026.",
         "wa_book_text": "مرحبا ديما لاندري، أرغب بحجز استلام للملابس.", "wa_quote_text": "مرحبا ديما لاندري، أرغب بعرض سعر لخدمة مغسلة الشركات.",
@@ -216,6 +216,15 @@ def nav(active, lang="en", alt=None):
 </header>'''
 
 
+def blog_col(lang="en"):
+    from blog_posts import POSTS
+    u = UI[lang]
+    title = u["blog"] + (" (English)" if lang == "ar" else "")
+    items = "".join(f'<li><a href="/blog/{p["slug"]}">{esc(p.get("short") or p["h1"].split(":")[0])}</a></li>' for p in POSTS[:6])
+    allg = "All guides" if lang == "en" else "كل المقالات"
+    return f'<div><h2><a href="/blog">{title}</a></h2><ul>{items}<li><a href="/blog"><strong>{allg}</strong></a></li></ul></div>'
+
+
 def footer(lang="en"):
     u = UI[lang]
     b = pfx(lang)
@@ -241,6 +250,7 @@ def footer(lang="en"):
     {col(u["services"], svc)}
     {col(u["locations"], loc)}
     {col(u["commercial"], biz)}
+    {blog_col(lang)}
   </div>
   <div class="wrap foot-base"><span>{u["foot_base"]}</span><span><a href="{b}/prices">{u["prices"]}</a> <a href="{b}/faq">{u["faq"]}</a> <a href="/blog">{u["blog"] + (" (English)" if lang == "ar" else "")}</a> <a href="{b}/contact">{u["contact"]}</a> <a href="{b}/privacy">{u["privacy"]}</a> <a href="{b}/terms">{u["terms"]}</a> <a href="/best-laundry-services-dubai">{u["compare"] + (" (English)" if lang == "ar" else "")}</a></span></div>
 </footer>

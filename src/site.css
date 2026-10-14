@@ -441,3 +441,8 @@ caption{text-align:left;font-weight:600;padding:8px 0}
 .skip:focus{top:12px}
 .hp{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;left:auto}
 html,body{overflow-x:clip}
+
+.foot-grid{grid-template-columns:1.3fr 1fr 1fr 1fr 1fr}
+.site-foot h2 a{color:#fff}
+@media (max-width:980px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.foot-grid{grid-template-columns:1fr}}

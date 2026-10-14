@@ -2,7 +2,7 @@
 
 POSTS = [
     {
-        "slug": "how-much-does-laundry-cost-in-dubai",
+        "slug": "how-much-does-laundry-cost-in-dubai", "short": "Laundry prices in Dubai",
         "title": "How Much Does Laundry Cost in Dubai? 2026 Price Guide",
         "desc": "What laundry, dry cleaning, ironing, abaya and curtain cleaning cost in Dubai in 2026, with real per item prices and how to keep your bill down.",
         "h1": "How Much Does Laundry Cost in Dubai? 2026 Price Guide",
@@ -19,7 +19,7 @@ POSTS = [
         "links": [("Full price list", "/prices"), ("Everyday laundry", "/services/wash-and-fold"), ("Dry cleaning", "/services/dry-cleaning")],
     },
     {
-        "slug": "holiday-home-laundry-dubai",
+        "slug": "holiday-home-laundry-dubai", "short": "Holiday home laundry",
         "title": "Holiday Home Laundry in Dubai: A Host's Guide to Linen Turnovers",
         "desc": "How Dubai Airbnb hosts and holiday home operators handle linen and towel turnovers: par levels, schedules, costs and choosing a laundry partner.",
         "h1": "Holiday Home Laundry in Dubai: A Host's Guide to Linen Turnovers",
@@ -36,7 +36,7 @@ POSTS = [
         "links": [("Holiday home laundry", "/business/holiday-homes"), ("Commercial quote", "/business#quote")],
     },
     {
-        "slug": "clean-carpets-before-winter-dubai",
+        "slug": "clean-carpets-before-winter-dubai", "short": "Carpet cleaning tips",
         "title": "How to Clean Carpets and Rugs Before Dubai's Winter Season",
         "desc": "Why Dubai carpets hold so much sand, how often to clean them, what to do at home and when to send rugs for a professional wash.",
         "h1": "How to Clean Carpets and Rugs Before Dubai's Winter Season",
@@ -52,7 +52,7 @@ POSTS = [
         "links": [("Carpet cleaning", "/services/carpet-cleaning"), ("Sofa cleaning", "/services/sofa-cleaning")],
     },
     {
-        "slug": "wedding-dress-cleaning-dubai",
+        "slug": "wedding-dress-cleaning-dubai", "short": "Wedding dress care",
         "title": "How to Clean and Store a Wedding Dress in Dubai",
         "desc": "When to clean a wedding dress, why invisible stains turn yellow, how to store it in Dubai's heat and humidity, and what professional cleaning costs.",
         "h1": "How to Clean and Store a Wedding Dress in Dubai",
@@ -68,7 +68,7 @@ POSTS = [
         "links": [("Wedding and evening dress cleaning", "/services/wedding-dress-cleaning"), ("Alterations", "/services/alterations")],
     },
     {
-        "slug": "dry-cleaning-vs-washing-care-labels",
+        "slug": "dry-cleaning-vs-washing-care-labels", "short": "Care labels explained",
         "title": "Dry Cleaning vs Washing: What Your Clothes Labels Actually Mean",
         "desc": "A plain guide to care label symbols: washing tubs, bleach triangles, drying squares, iron dots and the dry cleaning circle, and when to dry clean.",
         "h1": "Dry Cleaning vs Washing: What Your Clothes Labels Actually Mean",
@@ -85,7 +85,7 @@ POSTS = [
         "links": [("Dry cleaning", "/services/dry-cleaning"), ("Everyday laundry", "/services/wash-and-fold")],
     },
     {
-        "slug": "hotel-laundry-outsourcing-dubai",
+        "slug": "hotel-laundry-outsourcing-dubai", "short": "Hotel laundry outsourcing",
         "title": "Hotel Laundry Outsourcing in Dubai: Costs and What to Ask",
         "desc": "When Dubai hotels and serviced apartments should outsource linen, how pricing works, and the questions to ask a commercial laundry before signing.",
         "h1": "Hotel Laundry Outsourcing in Dubai: Costs and What to Ask",
@@ -101,7 +101,7 @@ POSTS = [
         "links": [("Hotel laundry", "/business/hotels"), ("Processing centres", "/branches/al-quoz-head-office"), ("Commercial quote", "/business#quote")],
     },
     {
-        "slug": "how-to-clean-designer-handbags",
+        "slug": "how-to-clean-designer-handbags", "short": "Designer handbag care",
         "title": "How to Clean Designer Handbags Without Damaging Them",
         "desc": "Safe everyday care for leather and designer handbags in Dubai's climate, what to avoid at home, and when to use professional cleaning.",
         "h1": "How to Clean Designer Handbags Without Damaging Them",
@@ -117,7 +117,7 @@ POSTS = [
         "links": [("Bag cleaning", "/services/bag-cleaning"), ("Shoe cleaning", "/services/shoe-cleaning")],
     },
     {
-        "slug": "abaya-care-guide",
+        "slug": "abaya-care-guide", "short": "Abaya care guide",
         "title": "Abaya Care Guide: Washing, Dry Cleaning and Pressing",
         "desc": "How to wash plain abayas, when embellished abayas need dry cleaning, how to avoid shine and fading, and how to prepare abayas before Ramadan and Eid.",
         "h1": "Abaya Care Guide: Washing, Dry Cleaning and Pressing",
@@ -133,7 +133,7 @@ POSTS = [
         "links": [("Abaya and kandura care", "/services/abaya-kandura-cleaning"), ("Ironing", "/services/ironing")],
     },
     {
-        "slug": "how-to-keep-kanduras-white",
+        "slug": "how-to-keep-kanduras-white", "short": "Keeping kanduras white",
         "title": "Kandura Laundry: How to Keep Kanduras White in Dubai's Heat",
         "desc": "Why white kanduras yellow and grey, how to treat collars and cuffs, how often to wash them, and how professional laundries keep them bright.",
         "h1": "Kandura Laundry: How to Keep Kanduras White in Dubai's Heat",
@@ -149,7 +149,7 @@ POSTS = [
         "links": [("Abaya and kandura care", "/services/abaya-kandura-cleaning"), ("Ironing", "/services/ironing")],
     },
     {
-        "slug": "eid-laundry-booking-tips",
+        "slug": "eid-laundry-booking-tips", "short": "Eid laundry tips",
         "title": "Eid Laundry Rush: How to Book Pickup in Time",
         "desc": "Why laundries in Dubai get busy before Eid and Ramadan, when to book, what to send first, and how to get traditional wear back in time.",
         "h1": "Eid Laundry Rush: How to Book Pickup in Time",
@@ -164,7 +164,7 @@ POSTS = [
         "links": [("Express laundry", "/services/express-laundry"), ("Abaya and kandura care", "/services/abaya-kandura-cleaning"), ("Book a pickup", "/contact#book")],
     },
     {
-        "slug": "sneaker-cleaning-dubai",
+        "slug": "sneaker-cleaning-dubai", "short": "Sneaker cleaning",
         "title": "Sneaker Cleaning in Dubai: What Works and What Ruins Shoes",
         "desc": "How to clean sneakers, suede and leather shoes safely, why the washing machine ruins them, and what professional shoe cleaning costs in Dubai.",
         "h1": "Sneaker Cleaning in Dubai: What Works and What Ruins Shoes",
@@ -180,7 +180,7 @@ POSTS = [
         "links": [("Shoe cleaning", "/services/shoe-cleaning"), ("Bag cleaning", "/services/bag-cleaning")],
     },
     {
-        "slug": "how-often-to-wash-bed-linen-and-towels",
+        "slug": "how-often-to-wash-bed-linen-and-towels", "short": "Washing bed linen",
         "title": "How Often Should You Wash Bed Linen and Towels in Dubai?",
         "desc": "How often to wash sheets, pillow cases, duvets and towels in Dubai's heat and humidity, and how to keep them fresh for longer.",
         "h1": "How Often Should You Wash Bed Linen and Towels in Dubai?",
