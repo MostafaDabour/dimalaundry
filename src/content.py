@@ -8,6 +8,7 @@ RETAIL = "+971 50 639 8093"
 BIZ = "+971 56 998 4493"       # commercial enquiries
 BIZ_WA = "971569984493"
 EMAIL = "info@dimalaundry.com"
+SUPPORT_EMAIL = "retail.support@dimalaundry.com"   # customer support for retail orders
 HQ_ADDRESS = "22, 24a Street, Al Quoz Industrial Area 3"
 RETAIL_HOURS = "10am to 10pm daily"
 APP_IOS = "https://apps.apple.com/ae/app/dima-laundry-dry-cleaning/id6738209489"

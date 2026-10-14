@@ -284,7 +284,7 @@ def build_all(B):
     rows = "".join(f"<tr><td>{a}</td><td>{b}</td></tr>" for a, b in [
         ("Toll free", f'<a href="tel:{C.TEL}">{C.TOLL}</a>'), ("WhatsApp", f'<a href="{B.wa_link()}">{C.RETAIL}</a>'),
         ("Retail line", f'<a href="tel:+971506398093">{C.RETAIL}</a>'), ("Commercial enquiries", f'<a href="tel:+971569984493">{C.BIZ}</a>'),
-        ("Email", f'<a href="mailto:{C.EMAIL}">{C.EMAIL}</a>'), ("Head office", C.HQ_ADDRESS + ", Dubai"),
+        ("General email", f'<a href="mailto:{C.EMAIL}">{C.EMAIL}</a>'), ("Order support", f'<a href="mailto:{C.SUPPORT_EMAIL}">{C.SUPPORT_EMAIL}</a>'), ("Head office", C.HQ_ADDRESS + ", Dubai"),
         ("Branch hours", C.RETAIL_HOURS), ("Processing centres", "Open 24 hours")])
     body = booking_wrap = B.booking_form()
     body += f'<div class="app-inline"><h2>Or book in the app</h2><p>Book pickups, track orders and pay in the Dima Laundry app.</p>{B.app_badges()}</div>'
@@ -382,7 +382,7 @@ def build_all(B):
     open(os.path.join(B.ROOT, "sitemap.xml"), "w").write(sm)
     llms = f"""# Dima Laundry
 
-> Dima Laundry LLC is a Dubai laundry and dry cleaning company operating since 2001. It runs {C.BRANCH_COUNT} retail branches (open {C.RETAIL_HOURS}) and 3 processing centres in Al Quoz (open 24 hours), cleans every item in-house, and offers pickup and delivery across Dubai. Prices start at AED 14 for a shirt and AED 48 for a two piece suit. Phone {C.TOLL}. WhatsApp {C.RETAIL}. Commercial {C.BIZ}. Email {C.EMAIL}.
+> Dima Laundry LLC is a Dubai laundry and dry cleaning company operating since 2001. It runs {C.BRANCH_COUNT} retail branches (open {C.RETAIL_HOURS}) and 3 processing centres in Al Quoz (open 24 hours), cleans every item in-house, and offers pickup and delivery across Dubai. Prices start at AED 14 for a shirt and AED 48 for a two piece suit. Phone {C.TOLL}. WhatsApp {C.RETAIL}. Commercial {C.BIZ}. Email {C.EMAIL}. Order support {C.SUPPORT_EMAIL}.
 
 Mobile app: iOS {C.APP_IOS} | Android {C.APP_ANDROID}
 

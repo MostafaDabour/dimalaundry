@@ -110,7 +110,7 @@ ORG = {
     "areaServed": {"@type": "City", "name": "Dubai"},
     "knowsAbout": ["Laundry", "Dry cleaning", "Ironing", "Abaya cleaning", "Kandura laundry", "Wedding dress cleaning", "Shoe cleaning", "Handbag cleaning", "Carpet cleaning", "Curtain cleaning", "Sofa shampooing", "Commercial laundry", "Hotel linen laundry"],
     "contactPoint": [
-        {"@type": "ContactPoint", "telephone": "+971-800-3462", "contactType": "customer service", "availableLanguage": ["English", "Arabic"]},
+        {"@type": "ContactPoint", "telephone": "+971-800-3462", "email": C.SUPPORT_EMAIL, "contactType": "customer service", "availableLanguage": ["English", "Arabic"]},
         {"@type": "ContactPoint", "telephone": "+971-56-998-4493", "contactType": "sales", "description": "Commercial laundry enquiries"},
     ],
     "sameAs": ["https://www.facebook.com/p/Dima-Laundry-100089460412002/", C.APP_IOS, C.APP_ANDROID],
@@ -235,7 +235,7 @@ def footer(lang="en"):
     <div class="foot-brand">
       <a class="logo" href="{b}/"><img src="/logo-white.png" alt="Dima Laundry" width="167" height="52"></a>
       <p>{u["foot_intro"]}</p>
-      <p>{u["toll"]} <a href="tel:{C.TEL}" dir="ltr">{C.TOLL}</a><br>{u["wa"]} <a href="{wa_link()}" dir="ltr">{C.RETAIL}</a><br>{u["biz"]} <a href="tel:+971569984493" dir="ltr">{C.BIZ}</a><br><a href="mailto:{C.EMAIL}">{C.EMAIL}</a></p>
+      <p>{u["toll"]} <a href="tel:{C.TEL}" dir="ltr">{C.TOLL}</a><br>{u["wa"]} <a href="{wa_link()}" dir="ltr">{C.RETAIL}</a><br>{u["biz"]} <a href="tel:+971569984493" dir="ltr">{C.BIZ}</a><br><a href="mailto:{C.EMAIL}">{C.EMAIL}</a><br><a href="mailto:{C.SUPPORT_EMAIL}">{C.SUPPORT_EMAIL}</a></p>
       {app_badges("on-dark", lang)}
     </div>
     {col(u["services"], svc)}

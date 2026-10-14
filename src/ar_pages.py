@@ -261,7 +261,7 @@ def build_ar(B):
     rows = "".join(f"<tr><td>{x}</td><td>{y}</td></tr>" for x, y in [
         ("الرقم المجاني", f'<a href="tel:{C.TEL}" dir="ltr">{C.TOLL}</a>'), ("واتساب", f'<a href="{B.wa_link()}" dir="ltr">{C.RETAIL}</a>'),
         ("خط الفروع", f'<a href="tel:+971506398093" dir="ltr">{C.RETAIL}</a>'), ("استفسارات الشركات", f'<a href="tel:+971569984493" dir="ltr">{C.BIZ}</a>'),
-        ("البريد الإلكتروني", f'<a href="mailto:{C.EMAIL}">{C.EMAIL}</a>'), ("المكتب الرئيسي", "شارع 24a رقم 22، القوز الصناعية 3، دبي"),
+        ("البريد الإلكتروني", f'<a href="mailto:{C.EMAIL}">{C.EMAIL}</a>'), ("دعم الطلبات", f'<a href="mailto:{C.SUPPORT_EMAIL}">{C.SUPPORT_EMAIL}</a>'), ("المكتب الرئيسي", "شارع 24a رقم 22، القوز الصناعية 3، دبي"),
         ("ساعات الفروع", A.RETAIL_HOURS), ("مراكز التنظيف", "تعمل 24 ساعة")])
     body = B.booking_form(AR)
     body += f'<div class="app-inline"><h2>أو احجز عبر التطبيق</h2><p>احجز الاستلام وتابع طلباتك وادفع من تطبيق ديما لاندري.</p>{B.app_badges(lang=AR)}</div>'
