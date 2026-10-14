@@ -272,6 +272,9 @@ def tracking_head():
 
 
 def shell(path, title, desc, body, schemas, noindex=False, lang="en", alt=None):
+    _rel = path[3:] if path.startswith("/ar/") else path
+    _pk = PAGE_PHOTO.get(_rel.rstrip("/") or "/")
+    og_img = f"{DOMAIN}/img/{_pk}-og.jpg" if _pk else f"{DOMAIN}/og-image.jpg"
     canon = DOMAIN + path
     t = esc(title)
     d = esc(desc)
@@ -311,7 +314,7 @@ def shell(path, title, desc, body, schemas, noindex=False, lang="en", alt=None):
 <meta property="og:title" content="{t}">
 <meta property="og:description" content="{d}">
 <meta property="og:url" content="{canon}">
-<meta property="og:image" content="{DOMAIN}/og-image.jpg">
+<meta property="og:image" content="{og_img}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#8C267D">
@@ -343,11 +346,52 @@ def write(path, page, sitemap=True):
         PAGES.append(path)
 
 
+# ---- photos (public/img, two widths each). key: (width, height, alt en, alt ar, object-position) ----
+PHOTOS = {
+    "garments-on-rail": (1200, 1607, "Dima Laundry team member hanging freshly cleaned shirts and suits on a rail", "موظف ديما لاندري يعلق القمصان والبدل بعد تنظيفها", "50% 30%"),
+    "folded-linens": (1200, 1607, "Freshly laundered towels and bed linen folded and tagged by Dima Laundry", "مناشف ومفارش مغسولة ومطوية بعلامة ديما لاندري", "50% 55%"),
+    "ironing-shirt": (1200, 1607, "Dima Laundry team member pressing a shirt with a steam iron", "موظف ديما لاندري يكوي قميصا بالمكواة البخارية", "50% 45%"),
+    "dima-van": (1200, 880, "Dima Laundry pickup and delivery van", "سيارة الاستلام والتوصيل من ديما لاندري", "50% 50%"),
+    "carpet-cleaning-home": (1200, 896, "Dima Laundry technician deep cleaning an area rug in a Dubai apartment", "فني ديما لاندري ينظف سجادة في شقة بدبي", "50% 50%"),
+    "sofa-cleaning": (1200, 896, "Dima Laundry technician shampooing a fabric sofa at home", "فني ديما لاندري ينظف كنبة قماش في المنزل", "50% 50%"),
+    "sofa-cushion-clean": (1200, 896, "Close up of a sofa cushion being cleaned with an extraction tool", "تنظيف وسادة كنبة بجهاز الشفط", "50% 50%"),
+    "curtain-steam-cleaning": (1200, 896, "Dima Laundry technician steam cleaning curtains on site", "فني ديما لاندري ينظف الستائر بالبخار في الموقع", "50% 50%"),
+    "facility-pressing": (1200, 670, "Dima Laundry team washing, pressing and finishing garments in the cleaning centre", "فريق ديما لاندري يغسل ويكوي الملابس في مركز التنظيف", "50% 50%"),
+    "facility-team": (1200, 670, "Dima Laundry team loading washers and folding linen in the cleaning centre", "فريق ديما لاندري يشغل الغسالات ويطوي المفارش في مركز التنظيف", "50% 50%"),
+    "commercial-washer": (1200, 1607, "Dima Laundry team member loading a commercial washing machine with linen", "موظف ديما لاندري يضع المفارش في غسالة تجارية", "50% 40%"),
+    "pickup-van-dubai": (1200, 1607, "Dima Laundry driver collecting laundry bags from a Dubai building", "سائق ديما لاندري يستلم أكياس الغسيل من مبنى في دبي", "50% 62%"),
+    "doorstep-delivery": (1200, 1607, "Dima Laundry driver delivering cleaned clothes to a customer at her door", "سائق ديما لاندري يسلم الملابس النظيفة للعميلة عند الباب", "50% 35%"),
+}
+PAGE_PHOTO = {
+    "/services": "facility-pressing", "/services/dry-cleaning": "garments-on-rail", "/services/wash-and-fold": "folded-linens",
+    "/services/ironing": "ironing-shirt", "/services/express-laundry": "dima-van", "/services/carpet-cleaning": "carpet-cleaning-home",
+    "/services/sofa-cleaning": "sofa-cleaning", "/services/curtain-cleaning": "curtain-steam-cleaning",
+    "/business": "commercial-washer", "/business/hotels": "folded-linens", "/business/holiday-homes": "doorstep-delivery",
+    "/business/restaurants": "facility-team", "/business/corporate-uniforms": "ironing-shirt", "/business/salons-spas-gyms": "folded-linens",
+    "/business/clinics": "garments-on-rail", "/about-us": "facility-team", "/branches/al-quoz-head-office": "facility-pressing",
+    "/contact": "dima-van", "/branches": "pickup-van-dubai",
+}
+
+
+def photo(key, lang="en", sizes="(max-width: 800px) 100vw, 45vw", lazy=True, cls=""):
+    w, h, alt_en, alt_ar, pos = PHOTOS[key]
+    alt = alt_ar if lang == "ar" else alt_en
+    load = 'loading="lazy" decoding="async"' if lazy else 'fetchpriority="high" decoding="async"'
+    return (f'<img{(" class=" + chr(34) + cls + chr(34)) if cls else ""} src="/img/{key}-1200.webp" '
+            f'srcset="/img/{key}-640.webp 640w, /img/{key}-1200.webp 1200w" sizes="{sizes}" '
+            f'width="{w}" height="{h}" alt="{esc(alt)}" style="object-position:{pos}" {load}>')
+
+
 def page_hero(path, name, h1, sub, book_label=None, wa_text=None, extra_btn="", lang="en", book_href=None):
     ch, cs = crumbs(path, name, lang)
-    return (f'<section class="page-hero"><div class="bubbles" data-count="7" aria-hidden="true"></div><div class="wrap">{ch}'
-            f'<h1>{h1}</h1><div class="answer tag-card"><span class="tag-hole" aria-hidden="true"></span><p>{sub}</p></div>'
-            f'{btns(book_label, wa_text, extra_btn, lang, book_href)}</div></section>'), cs
+    inner = (f'{ch}<h1>{h1}</h1><div class="answer tag-card"><span class="tag-hole" aria-hidden="true"></span><p>{sub}</p></div>'
+             f'{btns(book_label, wa_text, extra_btn, lang, book_href)}')
+    rel = path[3:] if path.startswith("/ar/") or path == "/ar" else path
+    key = PAGE_PHOTO.get(rel.rstrip("/") or "/")
+    if key:
+        return (f'<section class="page-hero has-img"><div class="bubbles" data-count="7" aria-hidden="true"></div>'
+                f'<div class="wrap ph-grid"><div class="ph-copy">{inner}</div><figure class="ph-img">{photo(key, lang, lazy=False)}</figure></div></section>'), cs
+    return (f'<section class="page-hero"><div class="bubbles" data-count="7" aria-hidden="true"></div><div class="wrap">{inner}</div></section>'), cs
 
 
 def cta_band(text, book_label=None, wa_text=None, lang="en", book_href=None):

@@ -83,6 +83,11 @@ def build_home(B):
 
 <div class="how-wave">{B.WAVE}</div><section class="how"><div class="wrap">
   <h2>Laundry without the hassle</h2>
+  <div class="how-photos">
+    <figure>{B.photo("pickup-van-dubai", sizes="(max-width: 800px) 80vw, 30vw")}<figcaption>We collect from your door</figcaption></figure>
+    <figure>{B.photo("facility-pressing", sizes="(max-width: 800px) 80vw, 30vw")}<figcaption>Cleaned in our own centres</figcaption></figure>
+    <figure>{B.photo("doorstep-delivery", sizes="(max-width: 800px) 80vw, 30vw")}<figcaption>Delivered back, ready to wear</figcaption></figure>
+  </div>
   {B.how_steps()}
   <p><a class="btn btn-tag" href="/contact#book">Book Your Pickup</a></p>
 </div></section>
@@ -110,8 +115,8 @@ def build_home(B):
 {app}
 
 <section class="biz-band"><div class="wrap two-col">
-  <div><h2>Laundry solutions for Dubai businesses</h2><p>Linen, towels and uniforms collected on schedule, cleaned in our own centres and returned when you need them.</p></div>
-  <div><div class="chips">{inds}</div><p><a class="btn btn-tag" href="/business#quote">Request a Commercial Quote</a></p></div>
+  <div><h2>Laundry solutions for Dubai businesses</h2><p>Linen, towels and uniforms collected on schedule, cleaned in our own centres and returned when you need them.</p><div class="chips">{inds}</div><p><a class="btn btn-tag" href="/business#quote">Request a Commercial Quote</a></p></div>
+  <figure class="biz-img">{B.photo("facility-team", sizes="(max-width: 800px) 100vw, 40vw")}</figure>
 </div></section>
 
 <section class="content"><div class="wrap prose">{B.faq_html(faqs)}<p><a href="/faq">View all FAQs</a></p></div></section>
