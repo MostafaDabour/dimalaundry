@@ -37,7 +37,7 @@ def build_home(B):
             ("Does Dima Laundry have an app?", "Yes. The Dima Laundry app is free on iPhone and Android for booking pickups, tracking orders and paying.")]
 
     app = f'''<section class="app-sec"><div class="wrap app-grid">
-  <div class="phone" aria-hidden="true"><div class="phone-screen"><img src="/logo.png" alt="" width="120" height="37"><div class="ph-row"><b>Pickup booked</b><span>Today, 7pm</span></div><div class="ph-row"><b>Order No. 2001</b><span>Cleaning</span></div><div class="ph-bar"><i></i></div><div class="ph-row"><b>Delivery</b><span>Tomorrow, 6pm</span></div></div></div>
+  <div class="phone" aria-hidden="true"><div class="phone-screen"><img src="/logo.webp" alt="" width="120" height="37"><div class="ph-row"><b>Pickup booked</b><span>Today, 7pm</span></div><div class="ph-row"><b>Order No. 2001</b><span>Cleaning</span></div><div class="ph-bar"><i></i></div><div class="ph-row"><b>Delivery</b><span>Tomorrow, 6pm</span></div></div></div>
   <div><h2>Rebook in seconds with the Dima app</h2><p>Schedule pickups in a few taps, track every order from collection to delivery, and pay from your phone. Free on iPhone and Android.</p>{B.app_badges()}</div>
 </div></section>'''
 
@@ -55,7 +55,7 @@ def build_home(B):
       <div class="string"></div>
       <div class="big-tag">
         <span class="tag-hole"></span>
-        <img class="tag-logo" src="/logo.png" alt="" width="150" height="47">
+        <img class="tag-logo" src="/logo.webp" alt="" width="150" height="47">
         <div class="tag-no">No. 2001</div>
         <dl>
           <div><dt>Items</dt><dd>3 shirts, 1 abaya, 1 suit</dd></div>
@@ -102,7 +102,7 @@ def build_home(B):
 <section class="home-sec"><div class="wrap">
   <div class="sec-head"><h2>Find Dima near you</h2><a href="/branches">View all locations</a></div>
   <div class="loc-split">
-    <div class="map"><iframe title="Map of Dima Laundry branches in Dubai" loading="lazy" src="https://www.google.com/maps?q=Dima+Laundry+Dubai&amp;output=embed"></iframe></div>
+    <div class="map"><iframe title="Map of Dima Laundry branches in Dubai" data-map="https://www.google.com/maps?q=Dima+Laundry+Dubai&amp;output=embed"></iframe></div>
     <div class="cards cards-2">{locs}</div>
   </div>
 </div></section>

@@ -110,8 +110,9 @@
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
     }, {rootMargin:"0px 0px -6% 0px"});
+    var tops = Array.prototype.map.call(items, function(el){ return el.getBoundingClientRect().top; }); // read all first, then write
     items.forEach(function(el, i){
-      if(el.getBoundingClientRect().top < vh * 1.05) return;
+      if(tops[i] < vh * 1.05) return;
       el.classList.add("reveal");
       el.style.transitionDelay = ((i % 6) * 60) + "ms";
       io.observe(el);
@@ -128,4 +129,14 @@
     });
     hero.addEventListener("mouseleave", function(){ tag.style.setProperty("--lean", "0deg"); });
   }
+  // maps: load the Google Maps embed only when the visitor scrolls near it (keeps first load fast)
+  var maps = document.querySelectorAll("iframe[data-map]");
+  if(maps.length){
+    var loadMap = function(f){ if(!f.src){ f.src = f.getAttribute("data-map"); } };
+    if("IntersectionObserver" in window){
+      var mo = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ loadMap(e.target); mo.unobserve(e.target); } }); }, {rootMargin: "300px 0px"});
+      maps.forEach(function(f){ mo.observe(f); });
+    } else { maps.forEach(loadMap); }
+  }
+
 })();

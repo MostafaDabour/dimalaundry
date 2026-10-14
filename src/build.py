@@ -209,7 +209,7 @@ def nav(active, lang="en", alt=None):
     return f'''<div class="app-bar" hidden><span>{u["app_bar"]}</span><a class="app-bar-go" data-ios="{C.APP_IOS}" data-android="{C.APP_ANDROID}" href="{C.APP_IOS}">{u["open"]}</a><button type="button" class="app-bar-x" aria-label="{u["close"]}">&times;</button></div>
 <header class="site-head">
   <div class="wrap head-row">
-    <a class="logo" href="{b}/"><img src="/logo.png" alt="Dima Laundry" width="141" height="44"></a>
+    <a class="logo" href="{b}/"><img src="/logo.webp" alt="Dima Laundry" width="141" height="44"></a>
     <nav aria-label="Main"><ul>{lis}</ul></nav>
     <div class="head-cta">{sw}<a class="tel" href="tel:{C.TEL}" dir="ltr">{C.TOLL}</a><a class="btn btn-main btn-book" href="{b}/contact#book">{u["book"]}</a></div>
   </div>
@@ -242,7 +242,7 @@ def footer(lang="en"):
     return f'''<div class="foot-wave">{WAVE}</div><footer class="site-foot">
   <div class="wrap foot-grid">
     <div class="foot-brand">
-      <a class="logo" href="{b}/"><img src="/logo-white.png" alt="Dima Laundry" width="167" height="52"></a>
+      <a class="logo" href="{b}/"><img src="/logo-white.webp" alt="Dima Laundry" width="167" height="52"></a>
       <p>{u["foot_intro"]}</p>
       <p>{u["toll"]} <a href="tel:{C.TEL}" dir="ltr">{C.TOLL}</a><br>{u["wa"]} <a href="{wa_link()}" dir="ltr">{C.RETAIL}</a><br>{u["biz"]} <a href="tel:+971569984493" dir="ltr">{C.BIZ}</a><br><a href="mailto:{C.EMAIL}">{C.EMAIL}</a><br><a href="mailto:{C.SUPPORT_EMAIL}">{C.SUPPORT_EMAIL}</a></p>
       {app_badges("on-dark", lang)}

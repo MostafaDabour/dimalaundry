@@ -147,7 +147,7 @@ def build_ar(B):
                 f'<tr><td>الهاتف</td><td><a href="tel:{C.TEL}" dir="ltr">{C.TOLL}</a> أو <a href="tel:+971506398093" dir="ltr">{C.RETAIL}</a></td></tr>'
                 f'<tr><td>واتساب</td><td><a href="{B.wa_link()}" dir="ltr">{C.RETAIL}</a></td></tr>'
                 f'<tr><td>الاتجاهات</td><td><a href="{maps}" rel="noopener" target="_blank">افتح في خرائط جوجل</a></td></tr></tbody></table></div>')
-        body += f'<div class="map"><iframe title="خريطة ديما لاندري {esc(a["name"])}" loading="lazy" src="https://www.google.com/maps?q={B.quote_plus("Dima Laundry " + b["address"])}&amp;hl=ar&amp;output=embed"></iframe></div>'
+        body += f'<div class="map"><iframe title="خريطة ديما لاندري {esc(a["name"])}" data-map="https://www.google.com/maps?q={B.quote_plus("Dima Laundry " + b["address"])}&amp;hl=ar&amp;output=embed"></iframe></div>'
         body += f'<h2>الاستلام والتوصيل حول {esc(a["area"])}</h2><p>تستلم ديما لاندري من المنازل والمكاتب في:</p>' + bullets(a["areas"])
         body += '<h2>الخدمات الأكثر طلبا هنا</h2><div class="cards">' + "".join(
             f'<a class="card" href="/ar/services/{C.POPULAR[k][0]}"><strong>{A.SERVICES[C.POPULAR[k][0]]["short"]}</strong><span>{A.SERVICES[C.POPULAR[k][0]]["card"]}</span></a>' for k in b["popular"]) + "</div>"
@@ -194,7 +194,7 @@ def build_ar(B):
         maps = "https://www.google.com/maps/search/?api=1&query=" + B.quote_plus("Dima Laundry " + b["address"])
         cards += (f'<article class="loc"><h3>{esc(a["name"])}</h3><p class="loc-place">{esc(a["place"])}</p><p>نخدم {esc("، ".join(a["areas"][:4]))} والمناطق المجاورة.</p>'
                   f'<p class="small">{A.RETAIL_HOURS}</p><div class="loc-links"><a href="{maps}" rel="noopener" target="_blank">الاتجاهات</a><a href="/ar/branches/{b["slug"]}">تفاصيل الفرع</a><a href="/ar/contact#book">احجز استلام</a></div></article>')
-    body = '<div class="map map-big"><iframe title="خريطة فروع ديما لاندري في دبي" loading="lazy" src="https://www.google.com/maps?q=Dima+Laundry+Dubai&amp;hl=ar&amp;output=embed"></iframe></div>'
+    body = '<div class="map map-big"><iframe title="خريطة فروع ديما لاندري في دبي" data-map="https://www.google.com/maps?q=Dima+Laundry+Dubai&amp;hl=ar&amp;output=embed"></iframe></div>'
     body += f'<h2>فروعنا الثمانية</h2><div class="locs">{cards}</div>'
     body += '<h2>مراكز التنظيف</h2><p>كل قطعة تنظف في مراكزنا الخاصة في القوز التي تعمل 24 ساعة، مع مركز جديد في مجمع دبي للاستثمار 2 يفتتح قريبا. <a href="/ar/branches/al-quoz-head-office">تعرف على مراكز التنظيف</a>.</p>'
     qas = [("أين أقرب فرع لديما لاندري؟", f"لدى ديما لاندري {C.BRANCH_COUNT} فروع في دبي: دبي مارينا (مارينا سكيب وكراون) والصفوح وجميرا وداون تاون دبي وشارع الشيخ زايد والكرامة وداماك أيكون سيتي."),
@@ -331,7 +331,7 @@ def build_ar(B):
       <p class="lede">ديما لاندري في خدمة دبي منذ 2001، بتنظيف داخلي في مراكزها الخاصة في القوز، واستلام وتوصيل، و{C.BRANCH_COUNT} فروع في أنحاء المدينة مفتوحة {A.RETAIL_HOURS}.</p>
       {B.btns(lang=AR)}
     </div>
-    <div class="hero-tag" aria-hidden="true"><div class="string"></div><div class="big-tag"><span class="tag-hole"></span><img class="tag-logo" src="/logo.png" alt="" width="150" height="47"><div class="tag-no">No. 2001</div>
+    <div class="hero-tag" aria-hidden="true"><div class="string"></div><div class="big-tag"><span class="tag-hole"></span><img class="tag-logo" src="/logo.webp" alt="" width="150" height="47"><div class="tag-no">No. 2001</div>
       <dl><div><dt>القطع</dt><dd>3 قمصان، عباية، بدلة</dd></div><div><dt>الخدمة</dt><dd>تنظيف وكوي</dd></div><div><dt>الاستلام</dt><dd>دبي مارينا، 7 مساء</dd></div><div><dt>الحالة</dt><dd>تمت مراجعة الجودة</dd></div></dl>
       <div class="tag-perf"></div><div class="tag-stub">احتفظ بهذا الإيصال</div></div></div>
   </div>
@@ -344,8 +344,8 @@ def build_ar(B):
   <div class="rv-grid" data-live="all" data-lang="ar">{"".join(B.review_card(k, AR) for k in ["sufouh_2yrs", "karama_raju", "jumeirah_7yrs", "szr_6yrs", "q3_satin", "marina_zeeshan"])}</div></div></section>
 <section class="home-sec tint"><div class="wrap"><div class="sec-head"><h2>الأسعار الأكثر طلبا</h2><a href="/ar/prices">قائمة الأسعار الكاملة</a></div><div class="price-cards">{pcards}</div><p class="small">الخدمة العادية شاملة التنظيف والكوي. الأسعار موحدة في كل الفروع ومحدثة في 12 أكتوبر 2026.</p></div></section>
 <section class="home-sec"><div class="wrap"><div class="sec-head"><h2>اعثر على ديما بالقرب منك</h2><a href="/ar/branches">كل الفروع</a></div>
-  <div class="loc-split"><div class="map"><iframe title="خريطة فروع ديما لاندري" loading="lazy" src="https://www.google.com/maps?q=Dima+Laundry+Dubai&amp;hl=ar&amp;output=embed"></iframe></div><div class="cards cards-2">{locs}</div></div></div></section>
-<section class="app-sec"><div class="wrap app-grid"><div class="phone" aria-hidden="true"><div class="phone-screen"><img src="/logo.png" alt="" width="120" height="37"><div class="ph-row"><b>تم حجز الاستلام</b><span>اليوم 7 مساء</span></div><div class="ph-row"><b>طلب رقم 2001</b><span>قيد التنظيف</span></div><div class="ph-bar"><i></i></div><div class="ph-row"><b>التوصيل</b><span>غدا 6 مساء</span></div></div></div>
+  <div class="loc-split"><div class="map"><iframe title="خريطة فروع ديما لاندري" data-map="https://www.google.com/maps?q=Dima+Laundry+Dubai&amp;hl=ar&amp;output=embed"></iframe></div><div class="cards cards-2">{locs}</div></div></div></section>
+<section class="app-sec"><div class="wrap app-grid"><div class="phone" aria-hidden="true"><div class="phone-screen"><img src="/logo.webp" alt="" width="120" height="37"><div class="ph-row"><b>تم حجز الاستلام</b><span>اليوم 7 مساء</span></div><div class="ph-row"><b>طلب رقم 2001</b><span>قيد التنظيف</span></div><div class="ph-bar"><i></i></div><div class="ph-row"><b>التوصيل</b><span>غدا 6 مساء</span></div></div></div>
   <div><h2>أعد الحجز في ثوان مع تطبيق ديما</h2><p>احجز الاستلام بلمسات قليلة، وتابع كل طلب من الاستلام حتى التوصيل، وادفع من هاتفك. مجاني على آيفون وأندرويد.</p>{B.app_badges(lang=AR)}</div></div></section>
 <section class="biz-band"><div class="wrap two-col"><div><h2>حلول مغسلة لشركات دبي</h2><p>مفارش ومناشف وزي موظفين تستلم في موعدها، وتنظف في مراكزنا الخاصة، وتعود عندما تحتاجها.</p></div>
   <div><div class="chips">{inds}</div><p><a class="btn btn-tag" href="/ar/business#quote">اطلب عرض سعر للشركات</a></p></div></div></section>

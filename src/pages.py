@@ -158,7 +158,7 @@ def build_all(B):
                  f'<tr><td>WhatsApp</td><td><a href="{B.wa_link()}">{C.RETAIL}</a></td></tr>'
                  f'<tr><td>Directions</td><td><a href="{maps}" rel="noopener" target="_blank">Open in Google Maps</a></td></tr>'
                  f'</tbody></table></div>')
-        mapblock = f'<div class="map"><iframe title="Map: Dima Laundry {esc(b["name"])}" loading="lazy" src="https://www.google.com/maps?q={B.quote_plus("Dima Laundry " + b["address"])}&amp;output=embed"></iframe></div>'
+        mapblock = f'<div class="map"><iframe title="Map: Dima Laundry {esc(b["name"])}" data-map="https://www.google.com/maps?q={B.quote_plus("Dima Laundry " + b["address"])}&amp;output=embed"></iframe></div>'
         body = visit + mapblock
         body += f'<h2>Pickup and delivery around {esc(b["area"])}</h2><p>Dima Laundry collects from homes and offices in:</p>' + B.bullets(b["areas"])
         body += '<h2>Popular services here</h2><div class="cards">' + "".join(
@@ -211,7 +211,7 @@ def build_all(B):
         cards += (f'<article class="loc"><h3>{esc(b["name"])}</h3><p class="loc-place">{esc(b["place"])}</p>'
                   f'<p>Serving {esc(", ".join(b["areas"][:4]))} and nearby areas.</p><p class="small">{C.RETAIL_HOURS}</p>'
                   f'<div class="loc-links"><a href="{maps}" rel="noopener" target="_blank">Directions</a><a href="/branches/{b["slug"]}">Branch details</a><a href="/contact#book">Book pickup</a></div></article>')
-    body = '<div class="map map-big"><iframe title="Map of Dima Laundry branches in Dubai" loading="lazy" src="https://www.google.com/maps?q=Dima+Laundry+Dubai&amp;output=embed"></iframe></div>'
+    body = '<div class="map map-big"><iframe title="Map of Dima Laundry branches in Dubai" data-map="https://www.google.com/maps?q=Dima+Laundry+Dubai&amp;output=embed"></iframe></div>'
     body += f'<h2>Our {C.BRANCH_COUNT} branches</h2><div class="locs">{cards}</div>'
     body += '<h2>Processing centres</h2><p>Everything is cleaned in our own centres in Al Quoz, open 24 hours, with a new centre in Dubai Investments Park 2 opening soon. <a href="/branches/al-quoz-head-office">See our processing centres</a>.</p>'
     rows = "".join(f'<tr><td><a href="/branches/{b["slug"]}">{esc(b["name"])}</a></td><td>{esc(b["address"])}</td><td>{C.RETAIL_HOURS}</td></tr>' for b in C.BRANCHES)
