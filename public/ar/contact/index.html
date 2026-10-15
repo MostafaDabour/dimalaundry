@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11518507799"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-11518507799');window.DIMA_ADS='AW-11518507799';</script>
 <script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>تواصل مع ديما لاندري دبي | احجز استلام الملابس</title>
@@ -18,7 +19,6 @@
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#8C267D">
 <link rel="preload" href="/fonts/ibm-plex-sans-arabic-arabic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<script>window.dataLayer=window.dataLayer||[];</script>
 <style>/* Fonts are self-hosted in /fonts: Outfit for headings, Plus Jakarta Sans for text */
 @font-face{font-family:"Outfit";src:url("/fonts/outfit-latin-500-normal.woff2") format("woff2");font-weight:500;font-display:swap}
 @font-face{font-family:"Outfit";src:url("/fonts/outfit-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
@@ -680,6 +680,14 @@ html,body{overflow-x:clip}
     } else { maps.forEach(loadMap); }
   }
 
+  // Google Ads and GA4: count taps on phone numbers and WhatsApp links as lead signals
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest("a[href]");
+    if(!a || !window.gtag) return;
+    var h = a.getAttribute("href");
+    if(/^tel:/.test(h)) gtag("event", "phone_click", {link_url: h, page_path: location.pathname});
+    else if(/wa\.me|whatsapp\.com/.test(h)) gtag("event", "whatsapp_click", {link_url: h.split("?")[0], page_path: location.pathname});
+  }, true);
 })();
 </script>
 </body>

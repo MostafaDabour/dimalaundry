@@ -139,4 +139,12 @@
     } else { maps.forEach(loadMap); }
   }
 
+  // Google Ads and GA4: count taps on phone numbers and WhatsApp links as lead signals
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest("a[href]");
+    if(!a || !window.gtag) return;
+    var h = a.getAttribute("href");
+    if(/^tel:/.test(h)) gtag("event", "phone_click", {link_url: h, page_path: location.pathname});
+    else if(/wa\.me|whatsapp\.com/.test(h)) gtag("event", "whatsapp_click", {link_url: h.split("?")[0], page_path: location.pathname});
+  }, true);
 })();

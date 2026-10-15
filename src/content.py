@@ -17,7 +17,7 @@ BRANCH_COUNT = 8
 
 # ---------- tracking (leave empty until you have the IDs) ----------
 GA4_ID = ""               # e.g. "G-XXXXXXXXXX"
-GOOGLE_ADS_ID = ""        # e.g. "AW-123456789"
+GOOGLE_ADS_ID = "AW-11518507799"
 ADS_LABEL_BOOKING = ""    # conversion label for pickup bookings, e.g. "AbCdEfGhIj"
 ADS_LABEL_QUOTE = ""      # conversion label for commercial quotes
 

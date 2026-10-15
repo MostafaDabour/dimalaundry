@@ -303,6 +303,7 @@ def shell(path, title, desc, body, schemas, noindex=False, lang="en", alt=None):
 <html lang="{lang}" dir="{"rtl" if lang == "ar" else "ltr"}">
 <head>
 <meta charset="utf-8">
+{tracking_head()}
 <script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{t}</title>
@@ -319,7 +320,6 @@ def shell(path, title, desc, body, schemas, noindex=False, lang="en", alt=None):
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#8C267D">
 {font}
-{tracking_head()}
 <style>{CSS}</style>
 {"".join(ld(s) for s in schemas)}
 </head>
