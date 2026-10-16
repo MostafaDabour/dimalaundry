@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suresh Prabhu - Dima Laundry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --brand-purple: #8d267c;
+            --brand-cyan: #00bcd4;
+            --brand-pink: #e91e63;
+            --bg-gray: #f8f9fa;
+            --text-dark: #1f2937;
+            --gradient-primary: linear-gradient(135deg, #8d267c 0%, #6b1c5e 100%);
+            --gradient-cyan: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+            --shadow-soft: 0 10px 40px rgba(141, 38, 124, 0.3);
+            --shadow-hover: 0 20px 60px rgba(141, 38, 124, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--gradient-primary);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0,188,212,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(233,30,99,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.98);
+            width: 100%;
+            max-width: 420px;
+            border-radius: 40px;
+            padding: 35px 28px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.6s ease-out;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Decorative Top Bar */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--brand-purple), var(--brand-cyan), var(--brand-pink));
+        }
+
+        /* Logo Section with Glass Effect */
+        .logo-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .logo-wrapper {
+            background: linear-gradient(135deg, rgba(141,38,124,0.05) 0%, rgba(0,188,212,0.05) 100%);
+            padding: 20px 30px;
+            border-radius: 20px;
+            box-shadow: 
+                inset 0 2px 4px rgba(255,255,255,0.8),
+                0 4px 20px rgba(141,38,124,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-wrapper:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+
+        /* Profile Section */
+        .profile-section {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .profile-name {
+            font-size: 32px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .profile-role {
+            color: var(--brand-cyan);
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .profile-role::before,
+        .profile-role::after {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--brand-cyan), transparent);
+        }
+
+        .profile-company {
+            color: var(--brand-purple);
+            font-size: 18px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* Links List with Modern Cards */
+        .links-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            padding: 14px 16px;
+            border-radius: 16px;
+            background: white;
+            box-shadow: 
+                0 2px 8px rgba(0,0,0,0.04),
+                0 0 0 1px rgba(141,38,124,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--brand-cyan);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .link-item:hover {
+            transform: translateX(4px);
+            box-shadow: 
+                0 8px 24px rgba(141,38,124,0.12),
+                0 0 0 1px rgba(141,38,124,0.15);
+        }
+
+        .link-item:hover::before {
+            transform: scaleY(1);
+        }
+
+        .icon-wrapper {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            font-size: 20px;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .link-item:hover .icon-wrapper {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Gradient Backgrounds for Icons */
+        .icon-whatsapp { background: linear-gradient(135deg, #25D36620, #25D36610); }
+        .icon-email { background: linear-gradient(135deg, #3b82f620, #3b82f610); }
+        .icon-web { background: linear-gradient(135deg, #6b728020, #6b728010); }
+        .icon-facebook { background: linear-gradient(135deg, #1877F220, #1877F210); }
+        .icon-instagram { background: linear-gradient(135deg, #E4405F20, #E4405F10); }
+        .icon-location { background: linear-gradient(135deg, #ef444420, #ef444410); }
+
+        .fa-whatsapp { color: #25D366; }
+        .fa-envelope { color: #3b82f6; }
+        .fa-globe { color: #6b7280; }
+        .fa-facebook-f { color: #1877F2; }
+        .fa-instagram { color: #E4405F; }
+        .fa-location-dot { color: #ef4444; }
+
+        .link-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #374151;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover .link-text {
+            color: var(--brand-purple);
+        }
+
+        .link-arrow {
+            margin-left: auto;
+            color: #9ca3af;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .link-item:hover .link-arrow {
+            opacity: 1;
+            transform: translateX(0);
+            color: var(--brand-cyan);
+        }
+
+        /* Bottom Buttons with Glow Effect */
+        .action-buttons {
+            display: flex;
+            width: 100%;
+            gap: 12px;
+        }
+
+        .btn {
+            flex: 1;
+            background: var(--gradient-cyan);
+            color: white;
+            border: none;
+            padding: 16px 20px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,188,212,0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,188,212,0.4);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn i {
+            font-size: 16px;
+        }
+
+        /* Floating Particles Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .logo-wrapper {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                border-radius: 30px;
+            }
+            
+            .profile-name {
+                font-size: 28px;
+            }
+            
+            .link-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Official Logo Image -->
+        <div class="logo-container">
+            <div class="logo-wrapper">
+                <img src="https://www.dimalaundry.com/logo.png" alt="Dima Laundry Logo" class="logo-img">
+            </div>
+        </div>
+
+        <!-- Identity Section -->
+        <div class="profile-section">
+            <h1 class="profile-name">Suresh Prabhu</h1>
+            <p class="profile-role">Chief Executive Officer</p>
+            <p class="profile-company">Dima Laundry LLC</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="links-list">
+            <a href="https://wa.me/971508847461" class="link-item" target="_blank">
+                <div class="icon-wrapper icon-whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
+                <span class="link-text">Add me on WhatsApp</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
+            </a>
+
+            <a href="mailto:suresh.prabhu@dimalaundry.com" class="link-item">
+                <div class="icon-wrapper icon-email"><i class="fa-regular fa-envelope"></i></div>
+                <span class="link-text">Send me an e-mail</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
+            </a>
+
+            <a href="https://dimalaundry.com" class="link-item" target="_blank">
+                <div class="icon-wrapper icon-web"><i class="fa-solid fa-globe"></i></div>
+                <span class="link-text">Visit our website</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
+            </a>
+
+            <a href="https://fb.com/dimalaundry" class="link-item" target="_blank">
+                <div class="icon-wrapper icon-facebook"><i class="fa-brands fa-facebook-f"></i></div>
+                <span class="link-text">Follow us on Facebook</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
+            </a>
+
+            <a href="https://www.instagram.com/dima_laundry_dubai/?hl=en" class="link-item" target="_blank">
+                <div class="icon-wrapper icon-instagram"><i class="fa-brands fa-instagram"></i></div>
+                <span class="link-text">Follow us on Instagram</span>
+                <i class="fa-solid fa-chevron-right link-arrow"></i>
+            </a>
+
+            <div class="link-item">
+                <div class="icon-wrapper icon-location"><i class="fa-solid fa-location-dot"></i></div>
+                <span class="link-text">Head Office, Alquoze 3</span>
+            </div>
+        </div>
+
+        <!-- Primary Actions -->
+        <div class="action-buttons">
+            <a href="tel:+971508847461" class="btn">
+                <i class="fa-solid fa-phone"></i> Call Me
+            </a>
+            <button class="btn" onclick="saveContact()">
+                <i class="fa-solid fa-user-plus"></i> Save Contact
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function saveContact() {
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Suresh Prabhu
+ORG:Dima Laundry LLC
+TITLE:Chief Executive Officer
+TEL;TYPE=CELL,VOICE:+971508847461
+EMAIL;TYPE=PREF,INTERNET:suresh.prabhu@dimalaundry.com
+URL:https://dimalaundry.com
+END:VCARD`;
+
+            const blob = new Blob([vcard], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            const newLink = document.createElement('a');
+            newLink.href = url;
+            newLink.setAttribute('download', 'Suresh_Prabhu.vcf');
+            document.body.appendChild(newLink);
+            newLink.click();
+            document.body.removeChild(newLink);
+            window.URL.revokeObjectURL(url);
+            
+            // Visual feedback
+            const btn = document.querySelector('button.btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-check"></i> Saved!';
+            btn.style.background = 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
