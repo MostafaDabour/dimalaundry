@@ -15,6 +15,23 @@ import content as C  # noqa: E402
 DOMAIN = "https://www.dimalaundry.com"
 CSS = open(os.path.join(SRC, "site.css"), encoding="utf-8").read()
 JS = open(os.path.join(SRC, "site.js"), encoding="utf-8").read()
+
+
+def _asset(ext, text):
+    """Write shared CSS/JS once as a hashed file so browsers cache it across pages."""
+    import hashlib
+    h = hashlib.sha1(text.encode("utf-8")).hexdigest()[:10]
+    d = os.path.join(os.path.dirname(SRC), "public", "assets")
+    os.makedirs(d, exist_ok=True)
+    for f in os.listdir(d):
+        if f.startswith("site.") and f.endswith("." + ext):
+            os.remove(os.path.join(d, f))
+    open(os.path.join(d, f"site.{h}.{ext}"), "w", encoding="utf-8").write(text)
+    return f"/assets/site.{h}.{ext}"
+
+
+CSS_URL = _asset("css", CSS)
+JS_URL = _asset("js", JS)
 P = json.load(open(os.path.join(SRC, "prices.json"), encoding="utf-8"))
 
 WA_ICON = re.search(r"(<svg.*?</svg>)", open(os.path.join(SRC, "_wa_ref.html"), encoding="utf-8").read(), re.S).group(1)
@@ -320,7 +337,7 @@ def shell(path, title, desc, body, schemas, noindex=False, lang="en", alt=None):
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#8C267D">
 {font}
-<style>{CSS}</style>
+<link rel="stylesheet" href="{CSS_URL}">
 {"".join(ld(s) for s in schemas)}
 </head>
 <body>
@@ -330,7 +347,7 @@ def shell(path, title, desc, body, schemas, noindex=False, lang="en", alt=None):
 {body}
 </main>
 {footer(lang)}
-<script>{JS}</script>
+<script src="{JS_URL}" defer></script>
 </body>
 </html>'''
     for bad in ("\u2014", "\u2013"):
