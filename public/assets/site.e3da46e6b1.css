@@ -466,3 +466,5 @@ html,body{overflow-x:clip}
   .how-photos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px;margin-right:-16px}
   .how-photos figure{flex:0 0 78%;scroll-snap-align:start}
 }
+
+.draft-bar{background:#fff3cd;color:#5c4400;text-align:center;font-weight:700;padding:10px 16px;border-bottom:2px solid #e0b100}

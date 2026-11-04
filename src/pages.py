@@ -21,7 +21,7 @@ def build_all(B):
     import ar_pages
     B.AR_PATHS.update(ar_pages.paths())
     for d in ["services", "branches", "business", "about-us", "faq", "contact", "prices", "thanks",
-              "best-laundry-services-dubai", "ar", "blog", "privacy", "terms"]:
+              "best-laundry-services-dubai", "ar", "blog", "privacy", "terms", "preview"]:
         p = os.path.join(B.ROOT, d)
         if os.path.isdir(p):
             shutil.rmtree(p)
