@@ -5,7 +5,6 @@ Status: `[ ]` to do, `[d]` drafted and waiting for review, `[x]` published (add 
 Each topic lists the search phrase it targets and the page it must link to.
 
 ## Queue
-- [d] How much does dry cleaning a suit cost in Dubai | "dry cleaning suit price dubai" | /prices, /services/dry-cleaning
 - [ ] Carpet cleaning prices in Dubai: what affects the cost | "carpet cleaning price dubai" | /services/carpet-cleaning
 - [ ] How often should you clean your sofa in Dubai | "sofa cleaning dubai" | /services/sofa-cleaning
 - [ ] Curtain cleaning in Dubai: at home or at the laundry | "curtain cleaning dubai" | /services/curtain-cleaning
@@ -47,3 +46,4 @@ Each topic lists the search phrase it targets and the page it must link to.
 - [ ] How to read a laundry price list and avoid surprises | "laundry price list dubai" | /prices
 
 ## Published
+- [x] 2026-11-05 How much does dry cleaning a suit cost in Dubai | "dry cleaning suit price dubai" | /prices, /services/dry-cleaning
