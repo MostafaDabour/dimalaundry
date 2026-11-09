@@ -5,7 +5,7 @@ Status: `[ ]` to do, `[d]` drafted and waiting for review, `[x]` published (add 
 Each topic lists the search phrase it targets and the page it must link to.
 
 ## Queue
-- [ ] Carpet cleaning prices in Dubai: what affects the cost | "carpet cleaning price dubai" | /services/carpet-cleaning
+- [d] Carpet cleaning prices in Dubai: what affects the cost | "carpet cleaning price dubai" | /services/carpet-cleaning
 - [ ] How often should you clean your sofa in Dubai | "sofa cleaning dubai" | /services/sofa-cleaning
 - [ ] Curtain cleaning in Dubai: at home or at the laundry | "curtain cleaning dubai" | /services/curtain-cleaning
 - [ ] What to look for in the best laundry in Dubai | "best laundry in dubai" | /best-laundry-services-dubai, /branches
