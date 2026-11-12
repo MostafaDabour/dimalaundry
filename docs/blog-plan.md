@@ -5,7 +5,7 @@ Status: `[ ]` to do, `[d]` drafted and waiting for review, `[x]` published (add 
 Each topic lists the search phrase it targets and the page it must link to.
 
 ## Queue
-- [ ] How often should you clean your sofa in Dubai | "sofa cleaning dubai" | /services/sofa-cleaning
+- [d] How often should you clean your sofa in Dubai | "sofa cleaning dubai" | /services/sofa-cleaning
 - [ ] Curtain cleaning in Dubai: at home or at the laundry | "curtain cleaning dubai" | /services/curtain-cleaning
 - [ ] What to look for in the best laundry in Dubai | "best laundry in dubai" | /best-laundry-services-dubai, /branches
 - [ ] Laundry pickup and delivery in Dubai: how it works | "laundry pickup and delivery dubai" | /contact, /services/express-laundry
