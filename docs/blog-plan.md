@@ -5,7 +5,7 @@ Status: `[ ]` to do, `[d]` drafted and waiting for review, `[x]` published (add 
 Each topic lists the search phrase it targets and the page it must link to.
 
 ## Queue
-- [ ] Laundry pickup and delivery in Dubai: how it works | "laundry pickup and delivery dubai" | /contact, /services/express-laundry
+- [d] Laundry pickup and delivery in Dubai: how it works | "laundry pickup and delivery dubai" | /contact, /services/express-laundry
 - [ ] How to remove sweat stains and yellow marks from white shirts | "sweat stains white shirt" | /services/dry-cleaning
 - [ ] Summer laundry in Dubai: sweat, sand and humidity | "laundry tips dubai summer" | /services/wash-and-fold
 - [ ] Ironing service vs pressing only: which do you need | "ironing service dubai" | /services/ironing
