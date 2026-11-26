@@ -5,7 +5,6 @@ Status: `[ ]` to do, `[d]` drafted and waiting for review, `[x]` published (add 
 Each topic lists the search phrase it targets and the page it must link to.
 
 ## Queue
-- [d] How to remove sweat stains and yellow marks from white shirts | "sweat stains white shirt" | /services/dry-cleaning
 - [ ] Summer laundry in Dubai: sweat, sand and humidity | "laundry tips dubai summer" | /services/wash-and-fold
 - [ ] Ironing service vs pressing only: which do you need | "ironing service dubai" | /services/ironing
 - [ ] How to wash and care for a ghutra and shemagh | "ghutra cleaning" | /services/abaya-kandura-cleaning
@@ -41,6 +40,7 @@ Each topic lists the search phrase it targets and the page it must link to.
 - [ ] How to read a laundry price list and avoid surprises | "laundry price list dubai" | /prices
 
 ## Published
+- [x] 2026-11-26 How to remove sweat stains and yellow marks from white shirts | "sweat stains white shirt" | /services/dry-cleaning
 - [x] 2026-11-23 Laundry pickup and delivery in Dubai: how it works | "laundry pickup and delivery dubai" | /contact, /services/express-laundry
 - [x] 2026-11-19 What to look for in the best laundry in Dubai | "best laundry in dubai" | /best-laundry-services-dubai, /branches
 - [x] 2026-11-16 Curtain cleaning in Dubai: at home or at the laundry | "curtain cleaning dubai" | /services/curtain-cleaning
